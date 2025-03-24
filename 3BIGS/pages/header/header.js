@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   window.addEventListener("scroll", function () {
-    // 스크롤 시 .scrolled 클래스 추가/제거
     headers.forEach(function (header) {
       if (window.scrollY > 50) {
         header.classList.add("scrolled");
@@ -44,11 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // 스크롤 시 로고 이미지 변경
     if (window.scrollY > 50) {
       logoImg.src = "3BIGS/source/header/LOGO-color.svg";
     } else {
-      // hover 상태일 때는 로고 색상 변경하지 않음
       if (!isHovered) {
         logoImg.src = "3BIGS/source/header/LOGO-white.svg";
       }
