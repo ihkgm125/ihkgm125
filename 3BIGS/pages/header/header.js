@@ -5,7 +5,7 @@ document.querySelectorAll('.header-btn').forEach(btn => {
   });
 });
 
-
+//헤더
 document.addEventListener("DOMContentLoaded", function () {
   const headers = document.querySelectorAll("#content-header, .h-logo, .header-btn-wrap, .header-lang, .header-right > div");
   const contentHeader = document.querySelector("#content-header");
@@ -50,5 +50,30 @@ document.addEventListener("DOMContentLoaded", function () {
         logoImg.src = "3BIGS/source/header/LOGO-white.svg";
       }
     }
+  });
+});
+
+// 2차 카테고리
+const buttons = document.querySelectorAll('.header-btn');
+const depthWraps = document.querySelectorAll('.header-depths-wrap');
+
+buttons.forEach(button => {
+  button.addEventListener('mouseenter', () => {
+    const target = button.getAttribute('data-target');
+    
+    depthWraps.forEach(wrap => {
+      wrap.classList.remove('active');
+    });
+
+    const targetWrap = document.querySelector(`.header-depths-wrap[data-target="${target}"]`);
+    if (targetWrap) {
+      targetWrap.classList.add('active');
+    }
+  });
+
+  button.addEventListener('mouseleave', () => {
+    depthWraps.forEach(wrap => {
+      wrap.classList.remove('active');
+    });
   });
 });
