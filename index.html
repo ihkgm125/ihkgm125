@@ -9,26 +9,25 @@
   <link rel="stylesheet" href="3BIGS/pages/header/header.css">
 </head>
 <body>
-  <nav id="content-header">
+<nav id="content-header">
     <div id="header-wrap">
-      <a class="h-logo" href="index.html">
-        <img class="h-logo-img" src="3BIGS/source/header/LOGO-white.svg" alt="Logo">
+      <a class="h-logo" href="main.html">
+        <img class="h-logo-img" src="/3BIGS/source/header/LOGO-white.svg" alt="Logo">
       </a>
       <ul class="header-btn-wrap">
-        <li class="header-btn">
-          <a href="">회사소개</a>
+        <li class="header-btn" data-target="1"><a href="">회사소개</a>
         </li>
-        <li class="header-btn"><a href="">핵심 플랫폼</a></li>
-        <li class="header-btn"><a href="">솔루션</a></li>
-        <li class="header-btn"><a href="">서비스</a></li>
-        <li class="header-btn"><a href="">NGS 분석</a></li>
-        <li class="header-btn"><a href="">자료 및 연구</a></li>
-        <li class="header-btn"><a href="">함께하는 공간</a></li>
+        <li class="header-btn" data-target="2"><a href="">핵심 플랫폼</a></li>
+        <li class="header-btn" data-target="3"><a href="">솔루션</a></li>
+        <li class="header-btn" data-target="4"><a href="">서비스</a></li>
+        <li class="header-btn" data-target="5"><a href="">NGS 분석</a></li>
+        <li class="header-btn" data-target="6"><a href="">자료 및 연구</a></li>
+        <li class="header-btn" data-target="7"><a href="">함께하는 공간</a></li>
       </ul>
       <div class="header-right-menu">
         <a class="header-lang">
           <div class="lang-logo">
-            <img src="3BIGS/source/header/flag-KR.svg">
+            <img src="/3BIGS/source/header/flag-KR.svg">
           </div>
           <p class="lang-type">KR</p>
           <span class="material-symbols-outlined">keyboard_arrow_right</span>
@@ -40,27 +39,60 @@
         </div>
       </div>
     </div>
-    <div class="header-depths-wrap">
+    <!-- 회사소개 2차 카테고리 -->
+    <div class="header-depths-wrap" data-target="1">
       <div class="header-depths">
         <div class="h-d-wrap">
-          <div class="h-d-1st">1 depth</div>
-          <a class="h-d-2nd">
-            <span class="h-d-2nd-txt">2 depth</span>
+          <div class="h-d-1st header-2">회사소개</div>
+          <div>
+            <a class="h-d-2nd btn-small">
+              <span class="h-d-2nd-txt ">CEO 인사말</span>
+              <span class="material-symbols-outlined">arrow_right_alt</span>
+            </a>
+            <a class="h-d-2nd btn-small">
+              <span class="h-d-2nd-txt">핵심 인력</span>
+              <span class="material-symbols-outlined">arrow_right_alt</span>
+            </a>
+            <a class="h-d-2nd btn-small">
+              <span class="h-d-2nd-txt">기업 연혁</span>
+              <span class="material-symbols-outlined">arrow_right_alt</span>
+            </a>
+            <a class="h-d-2nd btn-small">
+              <span class="h-d-2nd-txt">사업장 정보</span>
+              <span class="material-symbols-outlined">arrow_right_alt</span>
+            </a>
+          </div>
+        </div>
+        <div class="h-d-img h-d-img-2nd">
+          <div class="h-d-head-tittle header-2">인재가 만드는 혁신의 물결</div>
+          <div class="h-d-sub-tittle body-2">창의적이고 열정적인 인재가 모여 새로운 혁신을 일구어냅니다.</div>
+        </div>
+        <div class="h-d-btn-wrap">
+          <div><img src="" alt=""></div>
+          <div class="b-d-btn">
+            <span class="btn-large">사업장 정보</span>
+            <span class="material-symbols-outlined">keyboard_arrow_right</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 핵심 플랫폼 2차 카테고리 -->
+    <div class="header-depths-wrap" data-target="2">
+      <div class="header-depths">
+        <div class="h-d-wrap">
+          <div class="h-d-1st header-2">1 depth</div>
+          <a class="h-d-2nd btn-small">
+            <span class="h-d-2nd-txt btn-small">2 depth</span>
             <span class="material-symbols-outlined">arrow_right_alt</span>
           </a>
           <a class="h-d-2nd">
-            <span class="h-d-2nd-txt">2 depth</span>
+            <span class="h-d-2nd-txt btn-small">2 depth</span>
             <span class="material-symbols-outlined">arrow_right_alt</span>
           </a>
         </div>
-        <div class="h-d-img">
-          <div class="h-d-head-tittle">Text is here</div>
-          <div class="h-d-sub-tittle">Description is here</div>
-        </div>
-        <div class="h-d-btn">
-          <img src="" alt="">
-          <span>사업장 정보</span>
-          <span class="material-symbols-outlined">keyboard_arrow_right</span>
+        <div class="h-d-img h-d-img-1st">
+          <div class="h-d-head-tittle header-2">Text is here</div>
+          <div class="h-d-sub-tittle body-2">Description is here</div>
         </div>
       </div>
     </div>
