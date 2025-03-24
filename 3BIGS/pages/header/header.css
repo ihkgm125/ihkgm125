@@ -1,0 +1,348 @@
+/* default css start */
+body{
+  font-family: 'Pretendard', sans-serif;
+  color: var(--gray-main);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+body, ul, li, p, span, div{
+  margin: 0px;
+  padding: 0px;
+}
+
+img{
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+:root{
+  --primary: #3141E9;
+  --gray-point: #111111;
+  --gray-main: #444444;
+  --gray-sub: #888888;
+  --gray-disable: #BBBBBB;
+  --gray-line: #DDDDDD;
+  --gray-bakcground: #f9f9f9;
+}
+
+.header-1{
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 68px;
+  letter-spacing: -2.5%;
+}
+
+.header-2{
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 46px;
+  letter-spacing: -2.5%;
+}
+.body-1{
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -2.5%;
+}
+.body-2{
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: -2.5%;
+}
+.body-3{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -2.5%;
+}
+.btn-large{
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -2.5%;
+}
+.btn-small{
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -2.5%;
+}
+.caption{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -2.5%;
+}
+/* default CSS end */
+
+/* header start */
+
+body{ /* 임시 */
+  height: 200vh;
+  background-color: black;
+}
+
+#content-header{ /* before scorll */
+  width: 100%;
+  padding: 14px 0;
+  transition: background-color 0.3s ease-in-out;
+  background-color: transparent;
+  position: fixed;
+  z-index: 9999;
+}
+
+#content-header.scrolled { /* after scorll */
+  background-color: white;
+  box-shadow: 0 0 10px 0px #0000001c;
+}
+
+#header-wrap{
+  width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+.h-logo-img {
+  width: 120px;
+  height: 48px;
+  transition: opacity 0.3s ease-in-out;
+}
+.header-btn{
+  /* position: relative; */
+}
+
+.header-btn-wrap { /* before scroll */
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  color: white;
+  transition: color 0.3s ease-in-out; /* 스크롤 시 색상 변경에 대한 transition */
+}
+
+.header-btn-wrap.scrolled { /* after scroll */
+  color: var(--gray-main); /* 스크롤 시 색상 변경 */
+  transition: none; /* transition 제거 (hover 애니메이션 방지) */
+}
+
+.header-btn, .head-on {
+  display: inline-block;
+  position: relative; /* 기준점 설정 */
+  padding: 12px 24px;
+}
+
+/* 기본 밑줄을 숨기고, hover 시 나타내기 */
+.header-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* 밑줄 두께 */
+  background-color: var(--primary); /* 원하는 색상 */
+  transform: scaleX(0); /* 기본적으로 숨김 */
+  transform-origin: center; /* 가운데에서 확장 */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* hover 상태일 때 밑줄 애니메이션 */
+.header-btn:hover::after {
+  transform: scaleX(1);
+}
+
+/* active 상태에서는 항상 밑줄을 보이게 설정 */
+.header-btn.active::after {
+  transform: scaleX(1); /* 클릭 시 밑줄 유지 */
+}
+
+/* active 상태에서 변경 */
+.header-btn.active, .head-on {
+  font-weight: 600;
+  color: var(--primary); /* 선택된 텍스트 색상 */
+}
+
+.head-on::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* 밑줄 두께 */
+  background-color: var(--primary); /* 원하는 색상 */
+}
+
+.header-right-menu{
+  display: flex;
+  gap: 48px;
+  align-items: center;
+}
+
+.header-lang { /* before scroll */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid var(--gray-line);
+  border-radius: 100px;
+  padding: 6px 12px;
+  box-sizing: border-box;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; /* color와 background-color 전환 추가 */
+}
+
+.header-lang.scrolled { /* after scroll */
+  color: var(--gray-sub);
+  background-color: var(--gray-background);
+}
+
+.lang-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 24px;
+}
+
+.lang-typ{
+  font-size: 18px;
+}
+
+.lang-logo > span{
+  font-size: 20px;
+}
+
+.header-right{
+  width: 48px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.header-right > div{ /* before scroll */
+  background-color: var(--gray-sub);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.header-right > div{ /* before scroll */
+  background-color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.header-right > div.scrolled{ /* after scroll */
+  background-color: var(--gray-sub);
+}
+
+.header-right > div:nth-child(1), .header-right > div:nth-child(3){
+  width: 32px;
+  height: 4px;
+  border-radius: 4px;
+}
+
+.header-right > div:nth-child(2){
+  width: 24px;
+  height: 4px;
+  border-radius: 4px;
+}
+
+.header-depths-wrap{
+  width: 100%;
+  position: absolute;
+  top: 66px;
+  left: 0;
+  background-color: white;
+}
+
+.header-depths{
+  width: 1440px;
+  margin: 0 auto;
+}
+
+
+/* breakPoint 2 CSS START */
+@media (max-width: 1440px) {
+  .header-1{
+    font-size: 40px;
+    line-height: 58px;
+  }
+  
+  .header-2{
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .body-1{
+    font-size: 24px;
+    line-height: 34px;
+  }
+  .body-2{
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .body-3{
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .btn-large{
+    font-size: 24px;
+    line-height: 34px;
+  }
+  .btn-small{
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .caption{
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+/* breakPoint 2 CSS END */
+/* breakPoint 3 CSS START */
+@media (max-width: 768px) {
+  .header-1{
+    font-size: 24px;
+    line-height: 34px;
+  }
+  .header-2{
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .body-1{
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .body-2{
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .body-3{
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .btn-large{
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .btn-small{
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .caption{
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+/* breakPoint 2 CSS END */
