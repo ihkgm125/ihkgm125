@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // hover 시 로고 색상 변경
-    logoImg.src = "/3BIGS/source/header/LOGO-color.svg"; // hover 시 변경된 로고
+    logoImg.src = "3BIGS/source/header/LOGO-color.svg"; // hover 시 변경된 로고
   });
 
   // #content-header에서 hover를 벗어나면 scrolled 클래스를 제거
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 스크롤 위치가 50 이하일 때는 로고와 다른 요소들 모두 원래대로 되돌리기
     if (window.scrollY <= 50) {
-      logoImg.src = "/3BIGS/source/header/LOGO-white.svg"; // 원래 로고로 변경
+      logoImg.src = "3BIGS/source/header/LOGO-white.svg"; // 원래 로고로 변경
       headers.forEach(function (header) {
         header.classList.remove("scrolled"); // 모든 요소에서 scrolled 클래스 제거
       });
@@ -55,11 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 스크롤 시 로고 이미지 변경
     if (window.scrollY > 50) {
-      logoImg.src = "/3BIGS/source/header/LOGO-color.svg"; // 변경된 로고
+      logoImg.src = "3BIGS/source/header/LOGO-color.svg"; // 변경된 로고
     } else {
       // hover 상태일 때는 로고 색상 변경하지 않음
       if (!isHovered) {
-        logoImg.src = "/3BIGS/source/header/LOGO-white.svg"; // 원래 로고
+        logoImg.src = "3BIGS/source/header/LOGO-white.svg"; // 원래 로고
       }
     }
   });
