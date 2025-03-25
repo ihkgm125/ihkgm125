@@ -5,13 +5,14 @@ document.querySelectorAll('.header-btn').forEach(btn => {
   });
 });
 
-//헤더
+
 document.addEventListener("DOMContentLoaded", function () {
-  const headers = document.querySelectorAll("#content-header, .h-logo, .header-btn-wrap, .header-lang, .header-right > div");
+  const headers = document.querySelectorAll("#content-header, .h-logo, .header-btn-wrap, .header-lang, .header-lang > span, .header-right > div");
   const contentHeader = document.querySelector("#content-header");
-  const logoImg = document.querySelector(".h-logo-img");
+  const logoImg = document.querySelector(".h-logo > img");
 
   if (!contentHeader || !logoImg) return;
+
   let isHovered = false;
 
   contentHeader.addEventListener("mouseenter", function () {
@@ -53,27 +54,48 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+
 // 2차 카테고리
-const buttons = document.querySelectorAll('.header-btn');
-const depthWraps = document.querySelectorAll('.header-depths-wrap');
+document.addEventListener('DOMContentLoaded', function() {
+  const buttons = document.querySelectorAll('.header-btn');
+  const depthWraps = document.querySelectorAll('.header-depths-wrap');
+  const contentHeader = document.getElementById('content-header');
 
-buttons.forEach(button => {
-  button.addEventListener('mouseenter', () => {
-    const target = button.getAttribute('data-target');
-    
+  buttons.forEach(button => {
+    button.addEventListener('mouseenter', () => {
+      const target = button.getAttribute('data-target');
+      
+      depthWraps.forEach(wrap => {
+        wrap.classList.remove('active');
+      });
+      
+      const targetWrap = document.querySelector(`.header-depths-wrap[data-target="${target}"]`);
+      if (targetWrap) {
+        targetWrap.classList.add('active');
+      }
+    });
+  });
+
+  contentHeader.addEventListener('mouseleave', () => {
     depthWraps.forEach(wrap => {
       wrap.classList.remove('active');
     });
-
-    const targetWrap = document.querySelector(`.header-depths-wrap[data-target="${target}"]`);
-    if (targetWrap) {
-      targetWrap.classList.add('active');
-    }
   });
-
-  button.addEventListener('mouseleave', () => {
+  
+  contentHeader.addEventListener('mouseenter', () => {
     depthWraps.forEach(wrap => {
-      wrap.classList.remove('active');
+      if (wrap.classList.contains('active')) {
+        wrap.style.display = 'block';
+      }
     });
   });
+});
+
+document.querySelector('.header-right').addEventListener('click', function() {
+  document.getElementById('site-map-wrap').classList.add('active');
+});
+
+document.querySelector('.close-btn').addEventListener('click', function() {
+  document.getElementById('site-map-wrap').classList.remove('active');
 });
