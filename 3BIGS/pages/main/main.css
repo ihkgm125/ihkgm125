@@ -1,107 +1,257 @@
 #content-01, #content-02, #content-03, #content-04, #content-05, #content-06, #content-07, #content-08, #content-09, #content-10{
-    width: 100%;
-    margin-bottom: 6rem;
+  width: 100%;
+  margin-bottom: 6rem;
 }
 
-.c-2{
-    width: 100%;
-    min-width: 360px;
-    max-width: 1440px;
-    margin: 0 auto;
+.inner1440{
+  width: 100%;
+  min-width: 360px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 #content-11{
-    width: 100%;
+  width: 100%;
 }
+.color-primary{
+  color: var(--primary);
+}
+/* default CSS END */
 
 /* content-01 start */
 .breakPoint3-m-b{
-    display: none;
+  display: none;
 }
 
 .main-banner{
-    position: relative;
+  position: relative;
 }
 
 .m-b-img{
-width: 100%;
-height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
 .m-b-txt{
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
 .m-b-sub-title{
-margin-top: 2rem;
-color: var(--gray-line);
+  margin-top: 2rem;
+  color: var(--gray-line);
 }
 /* content-01 end */
 
 /* content-02 start */
 .c-2-slide-wrap{
-height: 28rem;
-display: flex;
-gap: 1.2rem;
+  height: 28rem;
+  display: flex;
+  gap: 1.2rem;
 }
 
 .c-2-title{
-position: relative;
+  position: relative;
 }
 
-.c-2-slide{
-position: relative;
-height: 100%;
-width: 11rem;
+.c-2-slide {
+  position: relative;
+  height: 100%;
+  width: 11rem;
+  transition: width 0.5s ease-in-out; /* 애니메이션 추가 */
 }
 
-.c-2-on{
-width: 100%;
+.c-2-on {
+  width: 100% !important; /* 활성화될 때 너비 증가 */
 }
 
 .c-2-t-img{
-position: absolute;
-width: 200px;
-top: -51px;
-right: -48px;
+  position: absolute;
+  width: 200px;
+  top: -51px;
+  right: -48px;
 }
 
 .c-2-sub-title1{
-margin-bottom: 2rem;
-color: var(--gray-point);
+  margin-bottom: 2rem;
+  color: var(--gray-point);
 }
 
 .c-2-txt{
-position: absolute;
-bottom: 0;
-left: 0;
-padding: 32px;
-width: 100%;
-box-sizing: border-box;
-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1.6rem;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;height: 50%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  border-radius: 24px;
 }
 
 .c-2-sub-title2{
-color: var(--gray-line);
+  color: var(--gray-line);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .3s ease-in-out, visible .3s ease-in-out;
+  margin-top: .6rem;
 }
 
 .c-2-img{
-height: 100%;
+  height: 100%;
 }
 
-.c-2-img > img{
-border-radius: 1.2rem;
+.c-2-img img {
+  border-radius: 1.2rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지 */
+}
+
+.c-2-display-none{
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease-in-out, visible .3s ease-in-out;
+}
+
+.c-2-text-center{
+  text-align: center;
 }
 /* content-02 end */
 
 /* content-03 start */
+#content-03 .inner1440 {
+  width: 100%;
+  height: 26rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 2.4rem;
+}
+
+.c-3 {
+  display: flex;
+  justify-content: flex-start; /* 왼쪽 정렬로 수정 */
+  align-items: center;
+  width: 100%;
+}
+
+.c-3-img {
+  width: 100%;
+  height: 100%;
+}
+
+.c-3-img img {
+  width: 100%; /* 이미지 크기를 부모 영역에 맞게 조정 */
+  height: 100%; /* 이미지가 부모 영역을 꽉 채우도록 설정 */
+  object-fit: cover; /* 이미지 비율을 유지하면서 부모 영역을 채움 */
+  border-radius: 1.2rem;
+}
+
+.c-3-txt {
+  width: 27.2rem; /* 고정된 너비 */
+  position: relative;
+  z-index: 1; /* 텍스트가 이미지 위에 표시되도록 설정 */
+}
+
+.c-3-head-title {
+  margin-bottom: 1.2rem;
+}
+
+.c-3-sub-title {
+  margin-bottom: 2.4rem;
+}
+
 /* content-03 end */
 
 /* content-04 start */
+.c-4-d-f {
+  display: flex;
+  gap: 2.4rem;
+  margin-top: 3.2rem;
+}
+
+.c-4-btn-wrap {
+  width: 15rem; /* 부모의 너비 고정 */
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+
+.c-4-btn {
+  min-width: 6rem; /* 최소 너비 설정 */
+  max-width: fit-content; /* 텍스트에 맞춰 최대 너비 설정 */
+  border: 0px;
+  color: var(--gray-sub);
+  white-space: nowrap;
+  text-align: left;
+  display: block;
+  box-sizing: border-box; /* 패딩과 보더를 너비에 포함 */
+  transition: width 0.3s ease-in-out, font-size 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* 부드러운 전환 효과 */
+}
+
+.c-4-btn.active {
+  font-size: 24px;
+  font-weight: 600;
+  background-color: var(--primary);
+  color: white;
+  transition: width 0.3s ease-in-out, font-size 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* 부드러운 전환 효과 */
+}
+
+.c-4-btn.btn-small {
+  padding: 1.2rem 2rem;
+}
+
+.c-4-txt-n-img.display {
+  visibility: visible; /* 보이도록 설정 */
+  opacity: 1; /* 보이도록 설정 */
+  transform: translateY(0); /* 원래 위치로 애니메이션 */
+  position: relative; /* 자연스러운 위치로 복원 */
+  display: flex;
+  gap: 2.4rem;
+  justify-content: flex-end;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* 애니메이션 추가 */
+}
+
+.c-4-txt-n-img {
+  visibility: hidden; /* 초기 상태에서 숨김 */
+  opacity: 0; /* 요소가 숨겨져 있을 때 완전히 투명 */
+  transform: translateY(20px); /* 약간 위로 숨겨진 상태로 위치 조정 */
+  position: absolute; /* 화면에서 보이지 않도록 */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* 애니메이션 추가 */
+}
+
+.c-4-txt {
+  width: 29rem;
+}
+
+.c-4-discription {
+  color: var(--gray-sub);
+  margin-bottom: .3rem;
+}
+
+.c-4-head-title {
+  margin-bottom: 1.2rem;
+}
+
+.c-4-sub-title {
+  margin-bottom: 2rem;
+}
+
+.c-4-image {
+  width: 23rem;
+  height: 16rem;
+  flex-shrink: 0; /* 축소 방지 */
+}
+
 /* content-04 end */
 
 /* content-05 start */
@@ -130,45 +280,62 @@ border-radius: 1.2rem;
 
 /* breakPoint 2 CSS START */
 @media (max-width: 1440px) {
+  /* Default CSS start */
+  .inner1440{
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+  /* Default CSS End */
 
-    /* content-01 start */
-    .m-b-txt{
-        padding: 0 2rem;
-        box-sizing: border-box;
-    }
-    /* content-01 end */
-    /* content-02 start */
-    .m-b-sub-title{
-        margin-top: .8rem;
-    }
-    /* content-02 end */
-    
-    /* content-03 start */
-    /* content-03 end */
-    
-    /* content-04 start */
-    /* content-04 end */
-    
-    /* content-05 start */
-    /* content-05 end */
-    
-    /* content-06 start */
-    /* content-06 end */
-    
-    /* content-07 start */
-    /* content-07 end */
-    
-    /* content-08 start */
-    /* content-08 end */
-    
-    /* content-09 start */
-    /* content-09 end */
-    
-    /* content-10 start */
-    /* content-10 end */
-    
-    /* content-11 start */
-    /* content-11 end */
+  /* content-01 start */
+  .m-b-txt{
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+  /* content-01 end */
+  /* content-02 start */
+  .m-b-sub-title{
+    margin-top: .8rem;
+  }
+  .c-2-slide-wrap{
+    height: 100%;
+    flex-direction: column;
+  }
+  .c-2-slide{
+    width: 100%;
+    height: 50vw;
+  }
+  .c-2-sub-title2{
+    margin-top: .3rem;
+  }
+  /* content-02 end */
+  
+  /* content-03 start */
+  /* content-03 end */
+  
+  /* content-04 start */
+  /* content-04 end */
+  
+  /* content-05 start */
+  /* content-05 end */
+  
+  /* content-06 start */
+  /* content-06 end */
+  
+  /* content-07 start */
+  /* content-07 end */
+  
+  /* content-08 start */
+  /* content-08 end */
+  
+  /* content-09 start */
+  /* content-09 end */
+  
+  /* content-10 start */
+  /* content-10 end */
+  
+  /* content-11 start */
+  /* content-11 end */
 }
 /* breakPoint 2 CSS END */
 
@@ -181,151 +348,52 @@ border-radius: 1.2rem;
 
 /* breakPoint 3 CSS START */
 @media (max-width: 768px) {
-    /* Default CSS START */
-    .header-1{
-        font-size: 1.2rem;
-        line-height: 1.7rem;
-    }
-    .header-2{
-        font-size: 1rem;
-        line-height: 1.4rem;
-    }
-    .body-1{
-        font-size: .9rem;
-        line-height: 1.3rem;
-    }
-    .body-2{
-        font-size: .8rem;
-        line-height: 1.1rem;
-    }
-    .body-3{
-        font-size: .7rem;
-        line-height: 1rem;
-    }
-    .btn-large{
-        font-size: 1rem;
-        line-height: 1.4rem;
-    }
-    .btn-small{
-        font-size: .8rem;
-        line-height: 1.1rem;
-    }
-    .caption{
-        font-size: .6rem;
-        line-height: .9rem;
-    }
-    /* Default CSS END */
+  /* Default CSS start */
+  .inner1440{
+    padding: 0 20px;
+  }
+  /* Default CSS End */
 
-    /* header start */
-    #header-wrap, .s-m-head > div, .site-map{
-        padding: 0 1rem;
-    }
-    .s-m-head{
-        padding: .6rem 0;
-    }
-    .s-m-head > div > span {
-        font-size: 1.6rem;
-        padding: 0rem;
-    }
-    .h-logo{
-        width: 4rem;
-        height: 1.6rem;
-    }
-    .h-logo > img{
-        width: 100%;
-    }
-    .site-map{
-        padding: 3.2rem 1rem 0 1rem;
-    }
-    .s-m-2depth-wrap{
-        flex-direction: column;
-        gap: .6rem;
-    }
-    .s-m-3depth{
-        margin-bottom: .3rem;
-    }
-    .marin-b-2-d{
-        margin-bottom: .6rem;
-    }
-    .header-right{
-        width: 1.6rem;
-        height: 1.6rem;
-        padding: .35rem .2rem;
-        gap: .3rem;
-    }
-    .header-right > div:nth-child(1), .header-right > div:nth-child(3){
-        width: 1.2rem;
-        height: .1rem;
-    }
-    .header-right > div:nth-child(2) {
-        width: .8rem;
-        height: .1rem;
-    }
-    .lang-logo{
-        width: 1.2rem;
-        height: .9rem;
-    }
-    .header-lang{
-        gap: .2rem;
-    }
-    .header-lang > span {
-        font-size: .8rem;
-    }
-    .lang-type{
-        font-size: .8rem;
-    }
-    .header-right-menu{
-        gap: 1.2rem;
-    }
-    /* header end */
+  /* content-01 start */
+  .breakPoint1-m-b{
+    display: none;
+  }
+  .breakPoint3-m-b{
+    display: block;
+  }
+  .m-b-txt{
+    padding: 0 20px;
+  }
+  /* content-01 end */
+  /* content-02 start */
 
+  /* content-02 end */
 
+  /* content-03 start */
+  /* content-03 end */
 
+  /* content-04 start */
+  /* content-04 end */
 
+  /* content-05 start */
+  /* content-05 end */
 
+  /* content-06 start */
+  /* content-06 end */
 
+  /* content-07 start */
+  /* content-07 end */
 
+  /* content-08 start */
+  /* content-08 end */
 
-    /* content-01 start */
-    .breakPoint1-m-b{
-        display: none;
-    }
-    .breakPoint3-m-b{
-        display: block;
-    }
-    .m-b-txt{
-        padding: 0 20px;
-    }
-    /* content-01 end */
-    /* content-02 start */
+  /* content-09 start */
+  /* content-09 end */
 
-    /* content-02 end */
+  /* content-10 start */
+  /* content-10 end */
 
-    /* content-03 start */
-    /* content-03 end */
-
-    /* content-04 start */
-    /* content-04 end */
-
-    /* content-05 start */
-    /* content-05 end */
-
-    /* content-06 start */
-    /* content-06 end */
-
-    /* content-07 start */
-    /* content-07 end */
-
-    /* content-08 start */
-    /* content-08 end */
-
-    /* content-09 start */
-    /* content-09 end */
-
-    /* content-10 start */
-    /* content-10 end */
-
-    /* content-11 start */
-    /* content-11 end */
+  /* content-11 start */
+  /* content-11 end */
 }
 /* breakPoint 3 CSS END */
