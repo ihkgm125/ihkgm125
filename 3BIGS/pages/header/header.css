@@ -70,15 +70,30 @@ img{
 }
 
 .btn-large{
+  display: inline-block;
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 2rem;
+  padding: 1.2rem 2rem;
+  box-sizing: border-box;
+  border: 1px solid var(--gray-line);
+  border-radius: 10rem;
+  background-color: white;
+  color: var(--gray-main);
 }
 
 .btn-small{
+  display: inline-block;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.4rem;
+  padding: .8rem 1.6rem;
+  box-sizing: border-box;
+  border-radius: 10rem;
+  border: 1px solid var(--gray-line);
+  color: var(--gray-main);
+  text-align: center;
+  background-color: white;
 }
 
 .caption{
@@ -536,10 +551,12 @@ img{
   .btn-large{
     font-size: 1.2rem;
     line-height: 1.7rem;
+    padding: .8rem 1.6rem;
   }
   .btn-small{
     font-size: .9rem;
     line-height: 1.3rem;
+    padding: .6rem 1rem;
   }
   .caption{
     font-size: .7rem;
@@ -641,12 +658,16 @@ img{
     line-height: 1rem;
   }
   .btn-large{
+    display: block;
     font-size: 1rem;
     line-height: 1.4rem;
+    padding: .6rem 1rem;
   }
   .btn-small{
+    display: block;
     font-size: .8rem;
     line-height: 1.1rem;
+    padding: .4rem .8rem;
   }
   .caption{
     font-size: .6rem;
