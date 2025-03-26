@@ -335,6 +335,8 @@ img{
   border-bottom: 1px solid var(--gray-line);
   color: var(--gray-main);
   transition: color .3s ease-in-out;
+  border: 0rem;
+  border-radius: 0;
 }
 
 .h-d-2nd:hover, .h-d-2nd:hover > span:nth-child(2){
