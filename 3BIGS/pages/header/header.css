@@ -332,10 +332,10 @@ img{
   align-items: center;
   justify-content: space-between;
   padding: .2rem 0;
-  border-bottom: 1px solid var(--gray-line);
+  border-bottom: 1px solid var(--gray-line) !important;
   color: var(--gray-main);
   transition: color .3s ease-in-out;
-  border: 0rem;
+  border: none;
   border-radius: 0;
 }
 
