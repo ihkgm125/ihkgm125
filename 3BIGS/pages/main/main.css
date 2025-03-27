@@ -2,14 +2,12 @@
   width: 100%;
   margin-bottom: 6rem;
 }
-
 .inner1440{
   width: 100%;
   min-width: 360px;
   max-width: 1440px;
   margin: 0 auto;
 }
-
 #content-11{
   width: 100%;
 }
@@ -30,6 +28,10 @@
 .m-b-img{
   width: 100%;
   height: 100vh;
+}
+
+.m-b-img > img{
+  object-fit: cover;
 }
 
 .m-b-txt{
@@ -61,23 +63,28 @@
   position: relative;
   height: 100%;
   width: 11rem;
-  transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out; /* 애니메이션 추가 */
 }
 
 .c-2-on {
-  width: 100% !important;
+  width: 100% !important; /* 활성화될 때 너비 증가 */
 }
 
 .c-2-t-img{
   position: absolute;
-  width: 200px;
+  width: 10rem;
   top: -51px;
   right: -48px;
 }
 
 .c-2-sub-title1{
+  display: block;
   margin-bottom: 2rem;
   color: var(--gray-point);
+}
+
+.c-2-b-3{
+  display: none;
 }
 
 .c-2-txt{
@@ -112,7 +119,7 @@
   border-radius: 1.2rem;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* 이미지 비율 유지 */
 }
 
 .c-2-display-none{
@@ -138,7 +145,7 @@
 
 .c-3 {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start; /* 왼쪽 정렬로 수정 */
   align-items: center;
   width: 100%;
 }
@@ -149,24 +156,26 @@
 }
 
 .c-3-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%; /* 이미지 크기를 부모 영역에 맞게 조정 */
+  height: 100%; /* 이미지가 부모 영역을 꽉 채우도록 설정 */
+  object-fit: cover; /* 이미지 비율을 유지하면서 부모 영역을 채움 */
   border-radius: 1.2rem;
 }
 
 .c-3-txt {
-  width: 27.2rem;
+  width: 27.2rem; /* 고정된 너비 */
   position: relative;
-  z-index: 1;
+  z-index: 1; /* 텍스트가 이미지 위에 표시되도록 설정 */
 }
 
 .c-3-head-title {
+  width: 100%;
   margin-bottom: 1.2rem;
 }
 
 .c-3-sub-title {
   margin-bottom: 2.4rem;
+  text-align: justify;
 }
 
 /* content-03 end */
@@ -188,7 +197,7 @@
 .c-4-btn {
   min-width: 6rem;
   max-width: fit-content;
-  border: 0px;
+  border: 0rem;
   color: var(--gray-sub);
   white-space: nowrap;
   text-align: left;
@@ -198,7 +207,7 @@
 }
 
 .c-4-btn.active {
-  font-size: 24px;
+  font-size: 1.2rem;
   font-weight: 600;
   background-color: var(--primary);
   color: white;
@@ -224,7 +233,7 @@
 .c-4-txt-n-img {
   visibility: hidden;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(1rem);
   position: absolute;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
@@ -234,16 +243,20 @@
 }
 
 .c-4-discription {
+  width: 100%;
   color: var(--gray-sub);
   margin-bottom: .3rem;
 }
 
 .c-4-head-title {
+  width: 100%;
   margin-bottom: 1.2rem;
 }
 
 .c-4-sub-title {
+  width: 100%;
   margin-bottom: 2rem;
+  text-align: justify;
 }
 
 .c-4-image {
@@ -251,13 +264,196 @@
   height: 16rem;
   flex-shrink: 0;
 }
-
 /* content-04 end */
 
 /* content-05 start */
+.c-5-txt{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.c-5-head-title{
+  margin-bottom: 1.2rem;
+}
+.c-5-head-title{
+  color: var(--gray-point);
+}
+.c-5-sub-title{
+  color: var(--gray-sub);
+}
+.c-5-card1-wrap{
+  display: flex;
+  gap: 2.4rem;
+}
+.c-5-card1-wrap > div{
+  width: 100%;
+  position: relative;
+}
+.c-5-card1-txt{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* 내부 요소를 오른쪽 정렬 */
+  padding: 1.2rem 1.6rem;
+  box-sizing: border-box;
+  background-color: var(--gray-background);
+  border-radius: 1.2rem;
+  gap: 1.2rem;
+  margin-bottom: .6rem;
+}
+.c-5-card1-txt > a{
+  background-color: transparent;
+}
+.c-5-card1-img{
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto;
+}
+.c-5-card1-txt > div:nth-child(2),.c-5-card1-txt > div:nth-child(3){
+  width: 100%;
+}
+.c-5-card-dot {
+  width: 1.2rem;
+  height: 1.2rem;
+  position: absolute;
+  bottom: -.6rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+c-5-card1-wrap > div:last-child{
+  position: absolute;
+  bottom: 0;
+}
+.c-5-card-dot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: var(--primary-opa-10);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.c-5-card-dot::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: .3rem;
+  height: .3rem;
+  background-color: var(--primary);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.c-5-card1-sub-title{
+  height: 1.4rem;
+}
+.c-5-card1-discription{
+  width: 100%;
+  height: 5.1rem;
+  text-align: justify;
+}
+.c-5-card1-txt2{
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2rem;
+  color: var(--primary);
+  text-align: center;
+  padding: 1.2rem 1.6rem;
+  background-color: var(--primary-opa-10);
+  border-radius: 1.2rem;
+}
+.c-5-arrow {
+  position: relative;
+  width: 49.6rem;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+.c-5-arrow > div{
+  position: absolute;
+  background-color: var(--primary);
+}
+.c-5-arrow > div:nth-child(1){
+  width: 1px;
+  height: 1.2rem;
+}
+.c-5-arrow > div:nth-child(2){
+  width: 1px;
+  height: 6rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.c-5-arrow > div:nth-child(3){
+  width: 1px;
+  height: 1.2rem;
+  right: 0;
+}
+.c-5-arrow > div:nth-child(4){
+  width: 100%;
+  height: 1px;
+  top: 1.2rem;
+}
+.arrow-breakPoint-2{
+  display: none;
+  filter: hue-rotate(-125deg);
+}
+.c-5-card2-wrap{
+  width: 50rem;
+  position: relative;
+  margin: 0 auto;
+}
+.c-5-card2-wrap > div:first-child{
+  text-align: center;
+  padding: 2rem 0;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 1.2rem;
+  position: relative;
+  overflow: hidden;
+}
+.c-5-card2-img1{
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  bottom: -20px; /* 임시 치수 */
+  left: -20px; /* 임시 치수 */
+}
+.c-5-card2-img2{
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  bottom: -62px; /* 임시 치수 */
+  right: -40px; /* 임시 치수 */
+}
+.c-5-card2-head-title > sup{
+  font-size: 50%;
+}
 /* content-05 end */
 
 /* content-06 start */
+.vw-inner1440{
+  background-color: rgb(198, 162, 162);
+  width: calc(((100% - 1440px) / 2) + 1440px );
+}
+.c-6-head-title{
+  width: 100%;
+  max-width: 1440px;
+  min-width: 360px;
+  margin-right: 0;
+  float: right;
+}
+.c-6-txt-wrap{
+  width: 100%;
+  display: inline-flex;
+  gap: 1.2rem;
+}
+.c-6-txt1-wrap{
+  width: 100%;
+}
+.c-6-txt2-text2{
+  width: ;
+  text-align: justify;
+}
 /* content-06 end */
 
 /* content-07 start */
@@ -285,6 +481,9 @@
     padding: 0 40px;
     box-sizing: border-box;
   }
+  #content-01, #content-02, #content-03, #content-04, #content-05, #content-06, #content-07, #content-08, #content-09, #content-10{
+    margin-bottom: 3.2rem;
+  }
   /* Default CSS End */
 
   /* content-01 start */
@@ -294,12 +493,16 @@
   }
   /* content-01 end */
   /* content-02 start */
+  .c-2-t-img{
+    display: none;
+  }
   .m-b-sub-title{
     margin-top: .8rem;
   }
   .c-2-slide-wrap{
     height: 100%;
     flex-direction: column;
+    gap: .6rem;
   }
   .c-2-slide{
     width: 100%;
@@ -308,15 +511,127 @@
   .c-2-sub-title2{
     margin-top: .3rem;
   }
+  .c-2-img img, .c-2-txt{
+    border-radius: .6rem;
+  }
   /* content-02 end */
   
   /* content-03 start */
+  #content-03 .inner1440{
+    height: 100%;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .c-3-img{
+    height: 46vw;
+  }
+  .c-3-img img{
+    border-radius: .6rem;
+  }
+  .c-3-txt{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .c-3-head-title{
+    margin-bottom: .6rem;
+  }
+  .c-3-sub-title{
+    margin-bottom: 1.2rem;
+  }
   /* content-03 end */
   
   /* content-04 start */
+  .c-4-d-f {
+    width: 100%;
+
+    flex-direction: column;
+  }
+  .c-4-btn-wrap{
+    width: 100%;
+    flex-direction: row;
+    overflow: scroll;
+  }
+  .c-4-btn-wrap::-webkit-scrollbar {
+    display: none; /* 스크롤바 숨기기 */
+  }
+  .c-4-btn{
+    min-width: auto;
+    max-width: none;
+  }
+  .c-4-btn.btn-small{
+    padding: .8rem 1.6rem;
+  }
+
+  .c-4-btn.active {
+    font-size: 1rem;
+  }
+  .c-4-btn:active{
+    background-color: var(--gray-background);
+  }
+  .c-4-txt-n-img {
+    /* margin-top: 3.7rem; */
+    flex-direction: column-reverse;
+  }
+  .c-4-txt{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .c-4-image{
+    width: 100%;
+    height: 30vw;
+  }
   /* content-04 end */
   
   /* content-05 start */
+  .c-5-head-title{
+    margin-bottom: .6rem;
+  }
+  .c-5-card1-wrap{
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  .c-5-card1-img{
+    width: 4rem;
+    height: 4rem;
+  }
+  .c-5-card1-txt{
+    border-radius: .6rem;
+  }
+  .c-5-card1-discription, .c-5-card1-sub-title{
+    height: 100%;
+  }
+  .c-5-arrow{
+    display: none;
+  }
+  .c-5-card-dot{
+    display: none;
+  }
+  .c-5-card2-wrap{
+    width: 100%;
+  }
+  .c-5-card2-img1{
+    width: 5rem;
+    height: 5rem;
+  }
+  .arrow-breakPoint-2{
+    width: 6rem;
+    height: 6rem;
+    display: block;
+    padding: 2rem 0;
+    margin: 0 auto;
+  }
+  .c-5-card1-txt2{
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    border-radius: .6rem;
+  }
+  .c-5-card2-wrap > div:first-child{
+    border-radius: .6rem;
+  }
   /* content-05 end */
   
   /* content-06 start */
@@ -349,6 +664,9 @@
 /* breakPoint 3 CSS START */
 @media (max-width: 768px) {
   /* Default CSS start */
+  #content-01, #content-02, #content-03, #content-04, #content-05, #content-06, #content-07, #content-08, #content-09, #content-10{
+    margin-bottom: 2.4rem;
+  }
   .inner1440{
     padding: 0 20px;
   }
@@ -370,12 +688,87 @@
   /* content-02 end */
 
   /* content-03 start */
+  #content-03 .inner1440{
+    gap: 1.6rem;
+  }
+  .c-2-sub-title1{
+    display: none;
+    margin-bottom: 1.6rem;
+  }
+  .c-2-b-3{
+    display: block;
+  }
+  .c-2-txt{
+    padding: 1.2rem;
+  }
+  .c-3-txt > .btn-small{
+    width: 100%;
+  }
   /* content-03 end */
 
   /* content-04 start */
+  .c-4-txt{
+    width: 100%;
+    align-items: normal;
+  }
+  .c-4-btn.active {
+    font-size: .8rem;
+    line-height: 1.2rem;
+  }
+  .c-4-btn.btn-small{
+    padding: .6rem 1rem;
+  }
+  .c-4-image{
+    width: 100%;
+    height: 30vw;
+  }
+  .c-4-head-title{
+    margin-bottom: .6rem;
+  }
+  .c-4-sub-title{
+    margin-bottom: 1.2rem;
+  }
   /* content-04 end */
 
   /* content-05 start */
+  .c-5-txt{
+    margin-bottom: 1.6rem;
+  }
+  .c-5-head-title{
+    margin-bottom: .4rem;
+  }
+  .c-5-card1-wrap{
+    gap: .6rem;
+  }
+  .c-5-card1-img{
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+  .c-5-card1-txt{
+    padding: .6rem .8rem;
+    align-items: normal;
+    margin-bottom: .2rem;
+  }
+  .c-5-card1-txt2{
+    font-size: .9rem;
+    line-height: 1.3rem;
+    padding: .6rem .8rem;
+  }
+  .c-5-card2-img1{
+    width: 4rem;
+    height: 4rem;
+  }
+  .c-5-card2-img2{
+    display: none;
+  }
+  .arrow-breakPoint-2{
+    width: 3.2rem;
+    height: 3.2rem;
+    padding: 1rem 0;
+  }
+  .c-5-card2-wrap > div:first-child{
+    padding: 1rem 0;
+  }
   /* content-05 end */
 
   /* content-06 start */
