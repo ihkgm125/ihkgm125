@@ -26,11 +26,12 @@ li{
 img{
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 :root{
   --primary: #3141E9;
+  --primary-opa-10: #3141E916;
   --gray-point: #111111;
   --gray-main: #444444;
   --gray-sub: #888888;
@@ -47,7 +48,7 @@ img{
 
 .header-2{
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 2.3rem;
 }
 
@@ -416,6 +417,11 @@ img{
   width: 6rem;
   height: 5rem;
   background-color: rgb(86, 65, 222); /*임시*/
+}
+
+.b-d-btn.btn-small{
+  padding: 0;
+  border: 0;
 }
 
 /* Site map css start*/
