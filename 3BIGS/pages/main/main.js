@@ -36,12 +36,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (newSubTitle) newSubTitle.classList.remove("c-2-display-none");
   }
 
+  // 자동 슬라이드 시작 함수
   function startAutoSlide() {
     if (window.innerWidth >= 1440) {
       interval = setInterval(() => changeSlide(), 20000);
     }
   }
 
+  // 슬라이드에 마우스 호버 이벤트 추가
   function addHoverEvents() {
     slides.forEach((slide, index) => {
       slide.addEventListener("mouseenter", () => {
@@ -67,13 +69,14 @@ document.addEventListener("DOMContentLoaded", function () {
       if (firstTitle) firstTitle.classList.remove("c-2-text-center");
       if (firstSubTitle) firstSubTitle.classList.remove("c-2-display-none");
 
+      // 나머지 슬라이드는 비활성화
       slides.forEach((slide, index) => {
-        if (index !== 0) {
-          const title = slide.querySelector(".c-2-head-title");
-          const subTitle = slide.querySelector(".c-2-txt .c-2-sub-title2");
+        if (index !== 0) {  // 첫 번째 슬라이드를 제외한 다른 슬라이드들
+          const title = slide.querySelector(".c-2-head-title");  // 제목
+          const subTitle = slide.querySelector(".c-2-txt .c-2-sub-title2");  // 서브 제목
 
-          if (title) title.classList.add("c-2-text-center");
-          if (subTitle) subTitle.classList.add("c-2-display-none");
+          if (title) title.classList.add("c-2-text-center");  // 중앙 정렬 적용
+          if (subTitle) subTitle.classList.add("c-2-display-none");  // 서브 제목 숨기기
         }
       });
 
@@ -98,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".c-4-btn");
   const contents = document.querySelectorAll(".c-4-txt-n-img");
+  const btnWrap = document.querySelector(".c-4-btn-wrap");
 
   let currentIndex = 0;
   let intervalId;
@@ -127,9 +131,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   buttons.forEach((button, index) => {
     button.addEventListener("click", () => {
-      clearInterval(intervalId);
+      clearInterval(intervalId); // 자동 순환 멈추기
       activateButton(index);
-      startAutoRotate();
+      startAutoRotate(); // 다시 자동 순환 시작
     });
   });
 });
