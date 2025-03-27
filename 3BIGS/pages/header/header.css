@@ -1,125 +1,10 @@
-/* default css start */
-html {
-  font-size: 20px; /* 1rem = 20px */
-}
-
-body{
-  font-family: 'Pretendard', sans-serif;
-  color: var(--gray-main);
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
-
-body, ul, li, p, span, div{
-  margin: 0rem;
-  padding: 0rem;
-}
-
-li{
-  list-style-type: none;
-}
-
-img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-:root{
-  --primary: #3141E9;
-  --primary-opa-10: #3141E916;
-  --gray-point: #111111;
-  --gray-main: #444444;
-  --gray-sub: #888888;
-  --gray-disable: #BBBBBB;
-  --gray-line: #DDDDDD;
-  --gray-background: #f9f9f9;
-}
-
-.header-1{
-  font-size: 2.4rem;
-  font-weight: 800;
-  line-height: 3.4rem;
-}
-
-.header-2{
-  font-size: 1.6rem;
-  font-weight: 600;
-  line-height: 2.3rem;
-}
-
-.body-1{
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 2rem;
-}
-
-.body-2{
-  font-size: 1.2rem;
-  font-weight: 300;
-  line-height: 1.7rem;
-}
-
-.body-3{
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 1.4rem;
-}
-
-.btn-large{
-  display: inline-block;
-  font-size: 1.4rem;
-  font-weight: 600;
-  line-height: 2rem;
-  padding: 1.2rem 2rem;
-  box-sizing: border-box;
-  border: 1px solid var(--gray-line);
-  border-radius: 10rem;
-  background-color: white;
-  color: var(--gray-main);
-}
-.btn-large.btn-large{
-  padding: 0;
-  border: none;
-}
-.btn-small{
-  display: inline-block;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.4rem;
-  padding: .8rem 1.6rem;
-  box-sizing: border-box;
-  border-radius: 10rem;
-  border: 1px solid var(--gray-line);
-  color: var(--gray-main);
-  text-align: center;
-  background-color: white;
-}
-
-.caption{
-  font-size: .8rem;
-  font-weight: 300;
-  line-height: 1.1rem;
-}
-
-.margin-b-2-d{
-  margin-bottom: 2rem;
-}
-
+/* header start */
 #header-wrap, .site-map, .s-m-head, .s-m-head > div, .m-b-txt{
   width: 100%;
   min-width: 360px;
   max-width: 1440px;
   margin: 0 auto;
 }
-
-/* default CSS end */
-
-/* header start */
 #content-header{ /* before scorll */
   width: 100%;
   min-width: 360px;
@@ -536,46 +421,6 @@ img{
 
 /* breakPoint 2 CSS START */
 @media (max-width: 1440px) {
-  /* Default CSS START */
-  .header-1{
-    font-size: 2rem;
-    line-height: 2.9rem;
-  }
-  .header-2{
-    font-size: 1.4rem;
-    line-height: 2rem;
-  }
-  .body-1{
-    font-size: 1.2rem;
-    line-height: 1.7rem;
-  }
-  .body-2{
-    font-size: 1rem;
-    line-height: 1.4rem;
-  }
-  .body-3{
-    font-size: .9rem;
-    line-height: 1.3rem;
-  }
-  .btn-large{
-    font-size: 1.2rem;
-    line-height: 1.7rem;
-    padding: .8rem 1.6rem;
-  }
-  .btn-small{
-    font-size: .9rem;
-    line-height: 1.3rem;
-    padding: .6rem 1rem;
-  }
-  .caption{
-    font-size: .7rem;
-    line-height: 1rem;
-  }
-  .margin-b-2-d{
-    margin-bottom: 1.2rem;
-  }
-  /* Default CSS END */
-
   /* header start */
   #header-wrap, .s-m-head > div, .site-map{
     width: 100%;
@@ -591,11 +436,9 @@ img{
   .site-map > div:nth-child(3){
     margin-bottom: .8rem;
   }
-
   .s-m-category-wrap{
     margin-bottom: 2rem;
   }
-
   .s-m-1depth{
     width: 100%;
     margin-bottom: 1.2rem;
@@ -620,16 +463,6 @@ img{
     flex-direction: column;
   }
   /* header end */
-
-
-
-
-
-
-
-
-
-
 }
 /* breakPoint 2 CSS END */
 
@@ -645,45 +478,6 @@ img{
 
 /* breakPoint 3 CSS START */
 @media (max-width: 768px) {
-  /* Default CSS START */
-  .header-1{
-    font-size: 1.2rem;
-    line-height: 1.7rem;
-  }
-  .header-2{
-    font-size: 1rem;
-    line-height: 1.4rem;
-  }
-  .body-1{
-    font-size: .9rem;
-    line-height: 1.3rem;
-  }
-  .body-2{
-    font-size: .8rem;
-    line-height: 1.1rem;
-  }
-  .body-3{
-    font-size: .7rem;
-    line-height: 1rem;
-  }
-  .btn-large{
-    display: block;
-    font-size: 1rem;
-    line-height: 1.4rem;
-    padding: .6rem 1rem;
-  }
-  .btn-small{
-    display: block;
-    font-size: .8rem;
-    line-height: 1.1rem;
-    padding: .4rem .8rem;
-  }
-  .caption{
-    font-size: .6rem;
-    line-height: .9rem;
-  }
-  /* Default CSS END */
-
   /* header start */
   #header-wrap, .s-m-head > div, .site-map{
     padding: 0 1rem;
