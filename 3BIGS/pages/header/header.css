@@ -307,6 +307,11 @@
   background-color: rgb(86, 65, 222); /*임시*/
 }
 
+.b-d-btn > .btn-large{
+  padding: 0;
+  border: none;
+}
+
 .b-d-btn.btn-small{
   padding: 0;
   border: 0;
