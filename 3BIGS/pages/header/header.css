@@ -231,7 +231,7 @@
 }
 
 .h-d-2nd{
-  display: flex;
+  display: flex !important;
   gap: .6rem;
   align-items: center;
   justify-content: space-between;
