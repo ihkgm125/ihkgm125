@@ -6,6 +6,7 @@ html {
 body{
   font-family: 'Pretendard', sans-serif;
   color: var(--gray-main);
+  transition: all .3s ease-in-out;
 }
 
 a {
@@ -44,6 +45,7 @@ img{
   font-size: 2.4rem;
   font-weight: 800;
   line-height: 3.4rem;
+  color: var(--gray-point);
 }
 
 .header-2{
@@ -82,7 +84,6 @@ img{
   background-color: white;
   color: var(--gray-main);
 }
-
 .btn-small{
   display: inline-block;
   font-size: 1rem;
@@ -96,7 +97,12 @@ img{
   text-align: center;
   background-color: white;
 }
-
+.btn-small:hover, .btn-large:hover{
+  background-color: var(--gray-background);
+}
+.btn-small:active, .btn-large:active{
+  background-color: var(--primary-opa-10);
+}
 .caption{
   font-size: .8rem;
   font-weight: 300;
@@ -110,6 +116,15 @@ img{
   min-width: 360px;
   max-width: 1440px;
   margin: 0 auto;
+}
+.inner1440{
+  width: 100%;
+  min-width: 360px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.inner100per{
+  width: 100%;
 }
 /* breakPoint 1 CSS END */
 
@@ -157,6 +172,10 @@ img{
   .margin-b-2-d{
     margin-bottom: 1.2rem;
   }
+  .inner1440{
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
 }
 /* breakPoint 2 CSS END */
 
@@ -202,6 +221,9 @@ img{
   .caption{
     font-size: .6rem;
     line-height: .9rem;
+  }
+  .inner1440{
+    padding: 0 20px;
   }
 }
 /* breakPoint 3 CSS END */
