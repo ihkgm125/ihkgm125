@@ -229,7 +229,11 @@
 .h-d-1st{
   color: var(--gray-point);
 }
-
+.h-d-2nd-wrap{
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
 .h-d-2nd{
   display: flex !important;
   gap: .6rem;
@@ -245,6 +249,7 @@
 
 .h-d-2nd:hover, .h-d-2nd:hover > span:nth-child(2){
   color: var(--primary);
+  background-color: transparent;
 }
 
 .material-symbols-outlined{
