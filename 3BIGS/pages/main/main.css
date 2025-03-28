@@ -2,12 +2,6 @@
   width: 100%;
   margin-bottom: 6rem;
 }
-.inner1440{
-  width: 100%;
-  min-width: 360px;
-  max-width: 1440px;
-  margin: 0 auto;
-}
 #content-11{
   width: 100%;
 }
@@ -40,6 +34,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+.m-b-head-title.header-1{
+  color: white !important; 
 }
 
 .m-b-sub-title{
@@ -101,6 +98,10 @@
   justify-content: flex-end;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
   border-radius: 24px;
+}
+
+.c-2-head-title{
+  color: white;
 }
 
 .c-2-sub-title2{
@@ -406,7 +407,7 @@ c-5-card1-wrap > div:last-child{
   text-align: center;
   padding: 2rem 0;
   background-color: var(--primary);
-  color: white;
+  color: white !important;
   border-radius: 1.2rem;
   position: relative;
   overflow: hidden;
@@ -425,6 +426,10 @@ c-5-card1-wrap > div:last-child{
   bottom: -62px; /* 임시 치수 */
   right: -40px; /* 임시 치수 */
 }
+.c-5-card2-head-title{
+  color: white;
+}
+
 .c-5-card2-head-title > sup{
   font-size: 50%;
 }
@@ -451,24 +456,225 @@ c-5-card1-wrap > div:last-child{
   width: 100%;
 }
 .c-6-txt2-text2{
-  width: ;
   text-align: justify;
 }
 /* content-06 end */
 
 /* content-07 start */
+.c-7-head-wrap{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: nowrap; */
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.c-7-news-card-wrap{
+  display: flex;
+  gap: 2.4rem;
+}
+.c-7-news-card{
+  width: 100%;
+  height: 100%;
+  padding-bottom: 1.2rem;
+  border-bottom: 2px solid var(--gray-disable);
+}
+.c-7-news-card:hover{
+  cursor: pointer;
+  color: var(--primary);
+  transition: color .3s ease-in-out;
+}
+.c-7-news-card:hover > .c-7-n-c-img > img{
+  transform: scale(1.1);
+  transition: transform .3s ease-in-out;
+}
+.c-7-news-card:active{
+  color: var(--primary);
+  transition: color .3s ease-in-out;
+}
+.c-7-n-c-img{
+  width: 100%;
+  height: 22.4rem;
+  margin-bottom: 1.2rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+.c-7-n-c-img > img{
+  object-fit: cover;
+}
+.c-7-n-c-head-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 원하는 줄 수 설정 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  margin-bottom: .6rem;
+}
+.c-7-n-c-date{
+  color: var(--gray-sub);
+}
 /* content-07 end */
 
 /* content-08 start */
+#content-08 > .inner100per{
+  position: relative;
+  overflow: hidden;
+}
+
+#content-08 > .inner1440{
+  margin-bottom: 2rem;
+}
+
+.c-8-logo-wrap {
+  z-index: 0;
+  position: absolute;
+  display: flex;
+  gap: 2rem;
+  white-space: nowrap; /* 줄바꿈 방지 */
+  animation: slideLeft 60s linear infinite;
+  flex-direction: column;
+}
+
+/* 로고들을 감싸는 각 div들도 flex 적용 */
+.c-8-logo-wrap > div {
+  display: flex;
+  gap: 12rem;
+}
+
+/* 두 번째 줄 로고 이동 */
+.c-8-logo-wrap > div:nth-child(2) {
+  transform: translateX(12rem);
+}
+
+/* 개별 로고 크기 설정 */
+.c-8-logo {
+  width: 10rem;
+  height: 3rem;
+}
+
+/* 좌우 그라디언트 */
+.c-8-white-gradient1 {
+  width: calc((100% - 1440px) / 2);
+  height: 15rem;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+
+.c-8-white-gradient2 {
+  width: calc((100% - 1440px) / 2);
+  height: 15rem;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+  z-index: 2;  /* z-index를 1보다 높게 설정 */
+  top: 0;
+  right: 0;
+}
+
+.inner100per > div:nth-child(2){
+  width: 100%;
+  height: 10rem;  /* 원하는 높이로 설정 */
+  position: relative;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 /* content-08 end */
 
-/* content-09 start */
-/* content-09 end */
+/* content-09 & 10 start */
+.c-9-company-info{
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  gap: 1.2rem;
+}
+.c-9-company-info > a:nth-child(1){
+  width: 25%;
+}
+.c-9-company-info > a:nth-child(2){
+  width: 24%;
+}
+.c-9-company-info > div:nth-child(3){
+  width: 51%;
+}
+.c-9-office-info-wrap{
+  width: auto;
+  min-width: 200px; /* 너무 작아지지 않도록 최소 너비 설정 */
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  border-radius: 1.2rem;
+  border: 1px solid var(--gray-line);
+  padding: 1.2rem 1.6rem;
+  box-sizing: border-box;
 
-/* content-10 start */
-/* content-10 end */
+}
+.c-9-office-info-wrap > span{
+  color: var(--primary);
+  font-size: 2.8rem;
+}
+.c-9-office-head-txt{
+  margin-bottom: .6rem;
+}
+.c-9-office-sub-txt{
+  color: var(--gray-sub);
+}
+.c-9-map-api-wrap{
+  width: 100%;
+  height: 36rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+/* content-09 & 10 end */
 
 /* content-11 start */
+.inner100per {
+  width: 100%;
+  position: relative;
+  overflow: hidden;  /* 화면을 넘어가는 영역을 숨김 */
+}
+
+.c-11 {
+  position: relative;
+}
+
+.c-11 > .inner100per {
+  display: flex;
+  justify-content: center;
+}
+
+.c-11 > .inner100per > div {
+  max-width: 1440px;
+  width: 100%;
+}
+
+/* 이미지 크기 고정 */
+.c-11 > .inner100per > div img {
+  width: auto;    /* 가로 크기를 자동으로 */
+  height: auto;   /* 세로 크기를 자동으로 */
+  max-width: 100%; /* 최대 크기는 부모의 100% */
+}
+
+.c-11 > div{
+  width: 100% !important;
+  height: auto !important;
+  position: absolute;
+  bottom: 0;
+  left: 0 ;
+}
+.c-11 > div:first-child{
+  z-index: 1;
+}
 /* content-11 end */
 
 
@@ -477,10 +683,6 @@ c-5-card1-wrap > div:last-child{
 /* breakPoint 2 CSS START */
 @media (max-width: 1440px) {
   /* Default CSS start */
-  .inner1440{
-    padding: 0 40px;
-    box-sizing: border-box;
-  }
   #content-01, #content-02, #content-03, #content-04, #content-05, #content-06, #content-07, #content-08, #content-09, #content-10{
     margin-bottom: 3.2rem;
   }
@@ -612,6 +814,7 @@ c-5-card1-wrap > div:last-child{
   }
   .c-5-card2-wrap{
     width: 100%;
+    max-width: 35rem;
   }
   .c-5-card2-img1{
     width: 5rem;
@@ -638,16 +841,69 @@ c-5-card1-wrap > div:last-child{
   /* content-06 end */
   
   /* content-07 start */
+  .c-7-news-card-wrap{
+    gap: 1.6rem;
+    flex-direction: column;
+  }
+  .c-7-news-card{
+    padding-bottom: .6rem;
+    transition: color .3s ease-in-out;
+  }
+  .c-7-n-c-img{
+    height: 60vw;
+    margin-bottom: 1.2rem;
+    border-radius: .6rem;
+  }
+  .c-7-n-c-head-title{
+    margin-bottom: .3rem;
+  }
   /* content-07 end */
   
   /* content-08 start */
+  .c-8-logo-wrap{
+    gap: 2rem ;
+  }
+  .c-8-logo-wrap > div{
+    gap: 6rem;
+  }
+  .c-8-logo-wrap > div:nth-child(2){
+    transform: translateX(6rem);
+  }
+  .c-8-logo {
+    width: 6rem;
+    height: 2rem;
+  }
+  .inner100per > div:nth-child(2), .c-8-white-gradient1, c-8-white-gradient2{
+    height: 6rem;
+  }
+  .c-8-white-gradient1, c-8-white-gradient2{
+    width: 10rem;
+  }
   /* content-08 end */
   
-  /* content-09 start */
-  /* content-09 end */
-  
-  /* content-10 start */
-  /* content-10 end */
+  /* content-09 & 10 start */
+  .c-9-office-info-wrap{
+    border-radius: .6rem ;
+    gap: .6rem;
+    padding: .8rem 1.6rem;
+    flex: 1; /* 기본적으로 동일한 너비 */
+  }
+  .c-9-company-info{
+    flex-wrap: wrap;
+    gap: .6rem;
+    margin: 2rem 0 1.6rem 0;
+  }
+  .c-9-company-info > div:nth-child(3){
+    flex: 0 0 100%; /* 너비를 100%로 고정 */
+  }
+  .c-9-office-info-wrap > span{
+    font-size: 2.4rem;
+  }
+  .c-9-map-api-wrap{
+    border-radius: .6rem;
+    height: 60vw;
+  }
+  /* content-09 & 10 end */
   
   /* content-11 start */
   /* content-11 end */
@@ -666,9 +922,6 @@ c-5-card1-wrap > div:last-child{
   /* Default CSS start */
   #content-01, #content-02, #content-03, #content-04, #content-05, #content-06, #content-07, #content-08, #content-09, #content-10{
     margin-bottom: 2.4rem;
-  }
-  .inner1440{
-    padding: 0 20px;
   }
   /* Default CSS End */
 
@@ -773,18 +1026,59 @@ c-5-card1-wrap > div:last-child{
 
   /* content-06 start */
   /* content-06 end */
-
+  
   /* content-07 start */
+  .c-7-head-wrap{
+    margin-bottom: 1.6rem;
+  }
+  .c-7-n-c-img{
+    margin-bottom: .8rem;
+  }
+  .c-7-n-c-head-title{
+    margin-bottom: .2rem;
+  }
   /* content-07 end */
 
   /* content-08 start */
+  #content-08 > .inner1440{
+    margin-bottom: 1.6rem;
+  }
+  .c-8-logo-wrap{
+    gap: 1rem ;
+  }
+  .c-8-logo-wrap > div{
+    gap: 2rem;
+  }
+  .c-8-logo-wrap > div:nth-child(2){
+    transform: translateX(4rem);
+  }
+  .inner100per > div:nth-child(2), .c-8-white-gradient1, c-8-white-gradient2{
+    height: 5rem;
+  }
+  .c-8-white-gradient1, c-8-white-gradient2{
+    width: 4rem;
+  }
   /* content-08 end */
 
-  /* content-09 start */
-  /* content-09 end */
-
-  /* content-10 start */
-  /* content-10 end */
+  /* content-09 & 10 start */
+  .c-9-office-info-wrap{
+    gap: .6rem;
+    padding: .4rem .8rem;
+  }
+  .c-9-company-info{
+    flex-direction: column;
+    margin: 1.2rem 0 .8rem 0;
+  }
+  .c-9-company-info > a{
+    width: 100%;
+  }
+  .c-9-office-info-wrap > span{
+    font-size: 1.6rem;
+  }
+  .c-9-office-number-txt1{
+    margin-bottom: .4rem;
+  }
+  /* content-09 & 10 end */
 
   /* content-11 start */
   /* content-11 end */
