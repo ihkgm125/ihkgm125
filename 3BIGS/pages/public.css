@@ -126,6 +126,10 @@ img{
 .inner100per{
   width: 100%;
 }
+.vw-inner1440{
+  background-color: rgb(198, 162, 162);
+  width: calc(((100% - 1440px) / 2) + 1440px );
+}
 /* breakPoint 1 CSS END */
 
 
@@ -172,7 +176,7 @@ img{
   .margin-b-2-d{
     margin-bottom: 1.2rem;
   }
-  .inner1440{
+  .inner1440, .vw-inner1440{
     padding: 0 40px;
     box-sizing: border-box;
   }
@@ -222,7 +226,7 @@ img{
     font-size: .6rem;
     line-height: .9rem;
   }
-  .inner1440{
+  .inner1440, .vw-inner1440{
     padding: 0 20px;
   }
 }
