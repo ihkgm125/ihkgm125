@@ -36,14 +36,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (newSubTitle) newSubTitle.classList.remove("c-2-display-none");
   }
 
-  // 자동 슬라이드 시작 함수
   function startAutoSlide() {
     if (window.innerWidth >= 1440) {
       interval = setInterval(() => changeSlide(), 20000);
     }
   }
 
-  // 슬라이드에 마우스 호버 이벤트 추가
   function addHoverEvents() {
     slides.forEach((slide, index) => {
       slide.addEventListener("mouseenter", () => {
@@ -60,23 +58,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function init() {
     if (window.innerWidth >= 1440) {
+
       const firstSlide = slides[0];
       firstSlide.classList.add("c-2-on");
-
       const firstTitle = firstSlide.querySelector(".c-2-head-title");
       const firstSubTitle = firstSlide.querySelector(".c-2-txt .c-2-sub-title2");
 
       if (firstTitle) firstTitle.classList.remove("c-2-text-center");
       if (firstSubTitle) firstSubTitle.classList.remove("c-2-display-none");
-
-      // 나머지 슬라이드는 비활성화
+      
       slides.forEach((slide, index) => {
-        if (index !== 0) {  // 첫 번째 슬라이드를 제외한 다른 슬라이드들
-          const title = slide.querySelector(".c-2-head-title");  // 제목
-          const subTitle = slide.querySelector(".c-2-txt .c-2-sub-title2");  // 서브 제목
+        if (index !== 0) {
+          const title = slide.querySelector(".c-2-head-title");
+          const subTitle = slide.querySelector(".c-2-txt .c-2-sub-title2");
 
-          if (title) title.classList.add("c-2-text-center");  // 중앙 정렬 적용
-          if (subTitle) subTitle.classList.add("c-2-display-none");  // 서브 제목 숨기기
+          if (title) title.classList.add("c-2-text-center");
+          if (subTitle) subTitle.classList.add("c-2-display-none");
         }
       });
 
@@ -85,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  init();
+  init(); 
 
   window.addEventListener("resize", () => {
     if (window.innerWidth < 1440) {
@@ -131,10 +128,121 @@ document.addEventListener("DOMContentLoaded", () => {
 
   buttons.forEach((button, index) => {
     button.addEventListener("click", () => {
-      clearInterval(intervalId); // 자동 순환 멈추기
+      clearInterval(intervalId);
       activateButton(index);
-      startAutoRotate(); // 다시 자동 순환 시작
+      startAutoRotate();
     });
   });
 });
 // content-04 End
+
+//content-11 Start
+document.addEventListener('DOMContentLoaded', function () {
+  const checkboxWrap = document.querySelector('.c-11-checkbox-wrap');
+  const checkboxIcon = document.getElementById('checkbox');
+  const formFields = document.querySelectorAll('#contactForm input[name="message"], #contactForm input[name="company"], #contactForm input[name="email"], #contactForm input[name="name"], #contactForm textarea[name="message"]');
+  const submitButton = document.querySelector('.c-11-btn');
+
+  formFields.forEach(field => {
+    field.addEventListener('input', checkFormValidity);
+  });
+
+  checkboxWrap.addEventListener('click', function () {
+    if (checkboxWrap.classList.contains('active')) {
+      toggleCheckbox();
+      checkFormValidity();
+    }
+  });
+
+  function toggleCheckbox() {
+    checkboxIcon.classList.toggle('checked');
+  }
+
+  function checkFormValidity() {
+    const allFieldsFilled = Array.from(formFields).every(field => field.value.trim() !== '');
+
+    if (allFieldsFilled) {
+      checkboxWrap.classList.add('active');
+      checkboxWrap.style.cursor = 'pointer';
+    } else {
+      checkboxWrap.classList.remove('active');
+      checkboxWrap.style.cursor = 'not-allowed';
+    }
+
+    const isCheckboxChecked = checkboxIcon.classList.contains('checked');
+    if (allFieldsFilled && isCheckboxChecked) {
+      submitButton.classList.add('active');
+    } else {
+      submitButton.classList.remove('active');
+    }
+  }
+});
+
+
+// 에러메시지
+// 스크립트 고쳐야함. 나중에 다시 함
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('#contactForm');
+  const emailField = document.querySelector('#email');
+  const nameField = document.querySelector('#name');
+  const errorMessage = document.querySelector('.error-message');
+  const submitButton = form.querySelector('button');
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    let isFormValid = true;
+
+    if (!emailField.validity.valid) {
+      errorMessage.style.display = 'block';
+      isFormValid = false;
+    } else {
+      errorMessage.style.display = 'none';
+    }
+
+    if (nameField.value.trim() === '') {
+      const nameErrorMessage = nameField.nextElementSibling;
+      nameErrorMessage.style.display = 'block';
+      isFormValid = false;
+    } else {
+      const nameErrorMessage = nameField.nextElementSibling;
+      nameErrorMessage.style.display = 'none';
+    }
+
+    if (isFormValid) {
+      console.log('폼 제출');
+      // form.submit(); 
+    }
+  });
+
+  emailField.addEventListener('input', function () {
+    if (emailField.validity.valid) {
+      errorMessage.style.display = 'none';
+    }
+  });
+
+  nameField.addEventListener('input', function () {
+    if (nameField.value.trim() !== '') {
+      const nameErrorMessage = nameField.nextElementSibling;
+      nameErrorMessage.style.display = 'none';
+    }
+  });
+
+  function toggleSubmitButton() {
+    const isFormValid = emailField.validity.valid && nameField.value.trim() !== '';
+    
+    if (isFormValid) {
+      submitButton.removeAttribute('disabled');
+      submitButton.style.cursor = 'pointer';
+    } else {
+      submitButton.setAttribute('disabled', 'true');
+      submitButton.style.cursor = 'not-allowed';
+    }
+  }
+
+  emailField.addEventListener('input', toggleSubmitButton);
+  nameField.addEventListener('input', toggleSubmitButton);
+
+  toggleSubmitButton();
+});
+//content-11 End
