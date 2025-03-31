@@ -1,0 +1,134 @@
+/* Break Point 1 START */
+#footer-wrap{
+  background-color: #3f3f3f;
+  color: white;
+  padding: 2rem 0 4rem 0;
+}
+.f-logo{
+  width: 6rem;
+  height: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+.footer-company{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+}
+
+.footer-company-name{
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.7rem;
+}
+
+.footer-company > .caption{
+  height: fit-content;
+  font-family: 'NanumMyeongjo', sans-serif;
+  font-weight: bold;
+  color: var(--gray-disable);
+}
+
+.footer-company-info{
+  margin-bottom: 2.4rem;
+}
+
+.footer-sub-title{
+  font-size: .8rem;
+  font-weight: 500;
+  line-height: 1.1rem;
+  color: var(--gray-disable);
+}
+
+.footer-head-title{
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.footer-link{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2.4rem;
+}
+
+.footer-link > a{
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+  padding: .3rem .6rem;
+  box-sizing: border-box;
+}
+
+.footer-link > a > span{
+  color: var(--gray-disable);
+}
+
+.footer-link-txt.btn-small{
+  color: white;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+#footer-wrap > .inner1440 > p {
+  text-align: center;
+  color: var(--gray-disable);
+}
+/* Break Point 1 END */
+
+/* Break Point 2 START */
+@media (max-width: 1440px) {
+  .f-logo{
+    margin-bottom: .6rem;
+  }
+
+  .footer-company-name{
+    font-size: 1rem;
+  }
+
+  .footer-sub-title{
+    font-size: .7rem;
+  }
+
+  .footer-head-title{
+    font-size: .9rem;
+  }
+}
+/* Break Point 2 END */
+
+/* Break Point 3 START */
+@media (max-width: 768px){
+  #footer-wrap{
+    padding: 2rem 0 3.2rem 0;
+  }
+  .f-logo{
+    width: 4rem;
+    height: 1.6rem;
+    margin-bottom: .2rem;
+  }
+  .footer-company, .footer-company-info, .footer-link{
+    margin-bottom: 1rem;
+  }
+  .footer-company > .caption{
+    display: none;
+  }
+
+  .footer-sub-title{
+    font-size: .6rem;
+  }
+
+  .footer-head-title{
+    font-size: .8rem;
+    margin-bottom: 1.2rem;
+  }
+  .footer-link{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2.4rem;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+/* Break Point 3 END */
