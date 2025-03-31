@@ -127,7 +127,6 @@ img{
   width: 100%;
 }
 .vw-inner1440{
-  background-color: rgb(198, 162, 162);
   width: calc(((100% - 1440px) / 2) + 1440px );
 }
 /* breakPoint 1 CSS END */
