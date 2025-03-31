@@ -5,10 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>3BIGS Renewal, vscode</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <!-- Material Symbols Filled -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols" rel="stylesheet">
+  <!-- Material Symbols Outlined -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
   <link rel="stylesheet" href="3BIGS/pages/public.css">
   <link rel="stylesheet" href="3BIGS/pages/header/header.css">
   <link rel="stylesheet" href="3BIGS/pages/main/main.css">
+  <link rel="stylesheet" href="3BIGS/pages/footer/footer.css">
 </head>
 <body>
   <nav id="content-header">
@@ -376,7 +381,8 @@
 <!-- content-02 end -->
 <!-- content-03 start -->
 <section id="content-03">
-  <div class="inner1440 c-3">
+  <!-- 망치면 아래 클래스명에 얘 넣기 >> inner1440 c-3 -->
+  <div class="vw-inner1440 c-3">
     <div class="c-3-img left"><img src="3BIGS/source/dummy.jpg"></div>
     <div class="c-3-txt">
       <p class="c-3-head-title header-1">그리고 연결</p>
@@ -699,49 +705,111 @@
 </section>
 <!-- content-10 end -->
 <!-- content-11 start -->
-<section id="content-11" style="display: none;">
+<section id="content-11">
   <div class="inner100per">
-    <div><img src="3BIGS/source/main/contact-1.svg"></div>
-    <div><img src="3BIGS/source/main/contact-2.svg"></div>
-  </div>
-  <div class="inner1440">
     <div>
-      <p class="header-2">궁금하신 내용이<br>있으신가요?</p>
-      <p class="body-1">입력해주신 정보는 저장되거나 공개되지 않으며,<br>답변은 입력해주신 이메일로 발송됩니다.</p>
+      <img src="3BIGS/source/main/contact.svg">
     </div>
-    <form id="contactForm">
-      <p>백엔드 처리 필요해서 기능은 작동하지 않습니다.</p>
-      <label for="name">이름 (필수)</label>
-      <input type="text" id="name" name="name" required>
-    
-      <label for="email">이메일 (필수)</label>
-      <input type="email" id="email" name="email" required>
-    
-      <label for="company">회사명 (필수)</label>
-      <input type="text" id="company" name="company" required>
-    
-      <label for="country">국가</label>
-      <select id="country" name="country">
-        <option value="">선택하세요</option>
-        <option value="대한민국">대한민국</option>
-        <option value="미국">미국</option>
-        <option value="일본">일본</option>
-        <option value="중국">중국</option>
-      </select>
-    
-      <label for="message">문의내용 (필수)</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-    
-      <div class="checkbox-wrap">
-        <input type="checkbox" id="agree" name="agree" required>
-        <label for="agree">개인정보 수집 및 이용에 동의합니다</label>
+    <div class="list2">
+      <img src="3BIGS/source/main/contact.svg">
+    </div>
+  </div>
+  <div class="c-11-txt-wrap">
+    <div class="inner1440">
+      <div class="c-11-txt">
+        <p class="header-1">궁금하신 내용이<br>있으신가요?</p>
+        <p class="body-1 breakPoint1-m-b">입력해주신 정보는 저장되거나 공개되지 않으며,<br>답변은 입력해주신 이메일로 발송됩니다.</p>
+        <p class="body-1 breakPoint3-m-b">
+          입력해주신 정보는 저장되거나<br>
+          공개되지 않으며,<br>
+          답변은 입력해주신 이메일로 발송됩니다.
+        </p>
       </div>
-    
-      <button type="submit">문의하기</button>
-    </form>
+      <form id="contactForm" novalidate>
+        <p style="font-size: .6rem;">백엔드 처리 필요해서 기능은 작동하지 않습니다.</p>
+        <p class="header-2">문의하기</p>
+
+        <div class="c-11-form-wrap">
+          <label for="name">이름 <span class="f-c-red">*</span></label>
+          <input class="c-11-input" type="text" id="name" name="name" required placeholder="이름을 입력해주세요.">
+          <span class="error-message">이름을 입력해주세요.</span>
+        </div>
+        
+        <div class="c-11-form-wrap">
+          <label for="email">이메일 <span class="f-c-red">*</span></label>
+          <input class="c-11-input" type="email" id="email" name="email" required placeholder="답변 받을 이메일을 입력해주세요.">
+          <span class="error-message">유효한 이메일을 입력해주세요.</span>
+        </div>
+      
+        <div class="c-11-form-wrap">
+          <label for="company">회사명 <span class="f-c-red">*</span></label>
+          <input class="c-11-input" type="text" id="company" name="company" required placeholder="소속된 회사명을 입력해주세요.">
+          <span class="error-message">회사명을 입력해주세요.</span>
+        </div>
+        
+        <div class="c-11-form-wrap">
+          <label for="country">국가</label>
+          <input class="c-11-input" type="text" id="country" name="country" required placeholder="귀사가 위치한 국가를 입력해주세요.">
+        </div>
+      
+        <div class="c-11-form-wrap">
+          <label for="message">문의내용 <span class="f-c-red">*</span></label>
+          <textarea class="c-11-input2" id="message" name="message" rows="4" required placeholder="문의 내용을 입력해주세요."></textarea>
+          <span class="error-message">문의 내용을 입력해주세요.</span>
+        </div>
+      
+        <div class="c-11-agree-btn">
+          <div class="c-11-checkbox-wrap">
+            <span class="material-symbols" id="checkbox">check_circle</span>
+            <label for="agree">개인정보 수집 및 이용에 동의합니다</label>
+          </div>        
+          <button class="c-11-btn btn-small" type="submit">문의하기</button>
+        </div>
+      </form>
+    </div>
+    <div class="c-11-company-logo">
+      <img src="3BIGS/source/main/LOGO-transparent.svg">
+    </div>
   </div>
 </section>
 <!-- content-11 end -->
+
+<!-- footer start -->
+<footer id="footer-wrap">
+  <div class="inner1440">
+    <div class="footer-company">
+      <div>
+        <div class="f-logo"><img src="3BIGS/source/header/LOGO-white.svg"></div>
+        <div class="footer-company-name">(주)쓰리빅스</div>
+      </div>
+      <p class="caption">
+        Creating opportunities through the exloration of Big Data and<br>its transformative possibilities
+      </p>
+    </div>
+    <div class="footer-company-info">
+      <div>
+        <p class="footer-sub-title">CEO</p>
+        <p class="footer-head-title">박준형</p>
+      </div>
+      <div>
+        <p class="footer-sub-title">본사</p>
+        <p class="footer-head-title">경기도 화성시 동탄첨단산업 1로 27 B동 831호</p>
+      </div>
+    </div>
+    <div class="footer-link">
+      <a href="https://www.facebook.com/3bigskr" target="_blank">
+        <p class="footer-link-txt btn-small">페이스북 바로가기</p>
+        <span class="material-symbols-outlined">arrow_outward</span>
+      </a>
+      <a href="https://www.linkedin.com/company/3bigs-co-limited/" target="_blank">
+        <p class="footer-link-txt btn-small">링크드인 바로가기</p>
+        <span class="material-symbols-outlined">arrow_outward</span>
+      </a>
+    </div>
+    <p class="caption">© 2025 3BIGS CO.,LTD. All Rights Reserved.</p>
+  </div>
+</footer>
+<!-- footer end -->
 
 <script src="3BIGS/pages/header/header.js"></script>
 <script src="3BIGS/pages/main/main.js"></script>
@@ -755,7 +823,7 @@
   
   // 오늘 확인한 적 없으면 alert 띄우기
   if (lastChecked !== today) {
-    alert("마지막 업데이트: 25.03.28\n업데이트는 작업량이 많은 날 16시 50분에 진행됩니다.");
+    alert("마지막 업데이트: 25.03.31\n업데이트는 작업량이 많은 날 16시 50분에 진행됩니다.");
     localStorage.setItem("updateCheckedDate", today); // 오늘 날짜 저장
   }
 </script>
