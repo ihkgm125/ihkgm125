@@ -60,11 +60,11 @@
   position: relative;
   height: 100%;
   width: 11rem;
-  transition: width 0.5s ease-in-out; /* 애니메이션 추가 */
+  transition: width 0.5s ease-in-out;
 }
 
 .c-2-on {
-  width: 100% !important; /* 활성화될 때 너비 증가 */
+  width: 100% !important;
 }
 
 .c-2-t-img{
@@ -120,7 +120,7 @@
   border-radius: 1.2rem;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 이미지 비율 유지 */
+  object-fit: cover;
 }
 
 .c-2-display-none{
@@ -146,9 +146,10 @@
 
 .c-3 {
   display: flex;
-  justify-content: flex-start; /* 왼쪽 정렬로 수정 */
-  align-items: center;
-  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 2.4rem;
+  padding-left: 1.2rem;
 }
 
 .c-3-img {
@@ -157,16 +158,16 @@
 }
 
 .c-3-img img {
-  width: 100%; /* 이미지 크기를 부모 영역에 맞게 조정 */
-  height: 100%; /* 이미지가 부모 영역을 꽉 채우도록 설정 */
-  object-fit: cover; /* 이미지 비율을 유지하면서 부모 영역을 채움 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 1.2rem;
 }
 
 .c-3-txt {
-  width: 27.2rem; /* 고정된 너비 */
+  width: 27.2rem;
   position: relative;
-  z-index: 1; /* 텍스트가 이미지 위에 표시되도록 설정 */
+  z-index: 1;
 }
 
 .c-3-head-title {
@@ -292,7 +293,7 @@
 .c-5-card1-txt{
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* 내부 요소를 오른쪽 정렬 */
+  align-items: flex-end;
   padding: 1.2rem 1.6rem;
   box-sizing: border-box;
   background-color: var(--gray-background);
@@ -436,10 +437,6 @@ c-5-card1-wrap > div:last-child{
 /* content-05 end */
 
 /* content-06 start */
-.vw-inner1440{
-  background-color: rgb(198, 162, 162);
-  width: calc(((100% - 1440px) / 2) + 1440px );
-}
 .c-6-head-title{
   width: 100%;
   max-width: 1440px;
@@ -505,7 +502,7 @@ c-5-card1-wrap > div:last-child{
 }
 .c-7-n-c-head-title {
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* 원하는 줄 수 설정 */
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -532,29 +529,25 @@ c-5-card1-wrap > div:last-child{
   position: absolute;
   display: flex;
   gap: 2rem;
-  white-space: nowrap; /* 줄바꿈 방지 */
+  white-space: nowrap;
   animation: slideLeft 60s linear infinite;
   flex-direction: column;
 }
 
-/* 로고들을 감싸는 각 div들도 flex 적용 */
 .c-8-logo-wrap > div {
   display: flex;
   gap: 12rem;
 }
 
-/* 두 번째 줄 로고 이동 */
 .c-8-logo-wrap > div:nth-child(2) {
   transform: translateX(12rem);
 }
 
-/* 개별 로고 크기 설정 */
 .c-8-logo {
   width: 10rem;
   height: 3rem;
 }
 
-/* 좌우 그라디언트 */
 .c-8-white-gradient1 {
   width: calc((100% - 1440px) / 2);
   height: 15rem;
@@ -570,14 +563,14 @@ c-5-card1-wrap > div:last-child{
   height: 15rem;
   background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
   position: absolute;
-  z-index: 2;  /* z-index를 1보다 높게 설정 */
+  z-index: 2; 
   top: 0;
   right: 0;
 }
 
-.inner100per > div:nth-child(2){
+#content-08 > .inner100per > div:nth-child(2){
   width: 100%;
-  height: 10rem;  /* 원하는 높이로 설정 */
+  height: 10rem;
   position: relative;
 }
 
@@ -609,7 +602,7 @@ c-5-card1-wrap > div:last-child{
 }
 .c-9-office-info-wrap{
   width: auto;
-  min-width: 200px; /* 너무 작아지지 않도록 최소 너비 설정 */
+  min-width: 200px;
   display: flex;
   align-items: center;
   gap: 1.2rem;
@@ -640,40 +633,219 @@ c-5-card1-wrap > div:last-child{
 /* content-11 start */
 .inner100per {
   width: 100%;
-  position: relative;
-  overflow: hidden;  /* 화면을 넘어가는 영역을 숨김 */
+  height: 10rem;
 }
 
-.c-11 {
+#content-11 > .inner100per{
+  width: 100%;
+  height: 11rem;
   position: relative;
-}
-
-.c-11 > .inner100per {
   display: flex;
-  justify-content: center;
+  align-items: flex-end;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
-.c-11 > .inner100per > div {
-  max-width: 1440px;
+#content-11 > .inner100per > div{
+  position: absolute;
+  display: flex;
+  gap: 0 40px;
+  width: max-content;
+  animation: aniScroll 60s linear infinite;
+}
+
+#content-11 > .inner100per > .list2{
+  animation: aniScroll-2 60s linear infinite;
+}
+
+@keyframes aniScroll{
+  0%{ transform: translateX(0%) }
+  100%{ transform: translateX(-100%) }
+}
+
+@keyframes aniScroll-2{
+  0%{ transform: translateX(100%) }
+  100%{ transform: translateX(0%) }
+}
+
+.c-11-txt-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.c-11-txt-wrap::before,
+.c-11-txt-wrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c-11-txt-wrap::before {
+  background-color: rgba(49, 212, 233, 0.3);
+}
+
+.c-11-txt-wrap::after {
+  background-color: rgba(49, 65, 233, 0.3);
+  z-index: 1;
+}
+
+.c-11-txt-wrap > .inner1440{
+  position: relative;
+  z-index: 3;
+  padding: 2rem auto !important;
+  display: flex;
+  color: white !important;
+  align-items: center;
+}
+.c-11-txt > .header-1{
+  color: white !important;
+}
+.c-11-txt{
   width: 100%;
 }
 
-/* 이미지 크기 고정 */
-.c-11 > .inner100per > div img {
-  width: auto;    /* 가로 크기를 자동으로 */
-  height: auto;   /* 세로 크기를 자동으로 */
-  max-width: 100%; /* 최대 크기는 부모의 100% */
+.c-11-txt > p:first-child{
+  margin-bottom: 1.2rem;
 }
 
-.c-11 > div{
-  width: 100% !important;
-  height: auto !important;
-  position: absolute;
-  bottom: 0;
-  left: 0 ;
+#contactForm{
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  font-size: .8rem;
+  font-weight: 400;
+  line-height: 1.1rem;
 }
-.c-11 > div:first-child{
-  z-index: 1;
+
+#contactForm > p {
+  margin-bottom: .4rem;
+}
+
+.c-11-agree-btn{
+  margin-top: .4rem;
+}
+
+.f-c-red{
+  color: #ff5454;
+}
+
+.c-11-form-wrap{
+  display: flex;
+  flex-direction: column;
+}
+
+.c-11-form-wrap > label{
+  margin-bottom: 1.2rem;
+}
+
+.c-11-input{
+  background-color: transparent;
+  border-bottom: 1px solid white !important;
+  border: none;
+  padding: .6rem 0;
+  color: white;
+}
+
+/* placeholder 텍스트 색상 */
+.c-11-input::placeholder, .c-11-input2::placeholder {
+  color: var(--gray-line);
+}
+
+input, textarea{
+  outline: none;
+}
+
+input:focus, textarea:focus{
+  border-color: var(--primary) !important;
+}
+
+.c-11-input2{
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 1.2rem;
+  padding: .6rem 1.2rem;
+  color: white;
+}
+
+.c-11-agree-btn{
+  display: flex;
+  justify-content: space-between;
+}
+.c-11-checkbox-wrap {
+  display: flex;
+  align-items: center;
+  opacity: .5;
+  cursor: not-allowed;
+}
+.c-11-checkbox-wrap.active{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.c-11-checkbox-wrap.active > label {
+  cursor: pointer;
+}
+
+.material-symbols {
+  font-size: 24px;
+  color: var(--gray-line);
+  transition: color 0.3s ease;
+}
+
+.material-symbols.checked {
+  color: white;
+}
+
+.c-11-btn{
+  border-radius: .6rem;
+  background-color: #ffffff40;
+  border: none;
+  color: #ffffff40;
+  width: fit-content;
+  cursor: not-allowed;
+}
+
+.c-11-btn:hover{
+  background-color: #ffffff40;
+}
+
+.c-11-checkbox-wrap > label {
+  cursor: not-allowed;
+}
+
+.c-11-btn.active{
+  background-color: white;
+  color: var(--primary);
+  cursor: pointer !important;
+}
+
+
+.c-11-company-logo{
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 0 ;
+}
+
+
+/* 에러메세지 */
+/* 기본 오류 메시지 숨기기 */
+input:invalid {
+  border-color: #ff5454;
+}
+
+/* 커스텀 오류 메시지 표시 */
+.error-message {
+  display: none;
+  color: #ff5454;
+  font-size: 0.8rem;
+  margin-top: .6rem;
 }
 /* content-11 end */
 
@@ -724,6 +896,11 @@ c-5-card1-wrap > div:last-child{
     flex-direction: column;
     gap: 2rem;
   }
+  .c-3 {
+    width: 100%;
+    flex-direction: column;
+    padding-left: 2rem;
+  }
   .c-3-img{
     height: 46vw;
   }
@@ -756,7 +933,7 @@ c-5-card1-wrap > div:last-child{
     overflow: scroll;
   }
   .c-4-btn-wrap::-webkit-scrollbar {
-    display: none; /* 스크롤바 숨기기 */
+    display: none;
   }
   .c-4-btn{
     min-width: auto;
@@ -773,7 +950,6 @@ c-5-card1-wrap > div:last-child{
     background-color: var(--gray-background);
   }
   .c-4-txt-n-img {
-    /* margin-top: 3.7rem; */
     flex-direction: column-reverse;
   }
   .c-4-txt{
@@ -873,7 +1049,7 @@ c-5-card1-wrap > div:last-child{
     width: 6rem;
     height: 2rem;
   }
-  .inner100per > div:nth-child(2), .c-8-white-gradient1, c-8-white-gradient2{
+  #content-08 > .inner100per > div:nth-child(2), .c-8-white-gradient1, c-8-white-gradient2{
     height: 6rem;
   }
   .c-8-white-gradient1, c-8-white-gradient2{
@@ -886,7 +1062,7 @@ c-5-card1-wrap > div:last-child{
     border-radius: .6rem ;
     gap: .6rem;
     padding: .8rem 1.6rem;
-    flex: 1; /* 기본적으로 동일한 너비 */
+    flex: 1;
   }
   .c-9-company-info{
     flex-wrap: wrap;
@@ -894,7 +1070,7 @@ c-5-card1-wrap > div:last-child{
     margin: 2rem 0 1.6rem 0;
   }
   .c-9-company-info > div:nth-child(3){
-    flex: 0 0 100%; /* 너비를 100%로 고정 */
+    flex: 0 0 100%;
   }
   .c-9-office-info-wrap > span{
     font-size: 2.4rem;
@@ -906,6 +1082,30 @@ c-5-card1-wrap > div:last-child{
   /* content-09 & 10 end */
   
   /* content-11 start */
+  .c-11-txt-wrap > .inner1440{
+    flex-direction: column;
+    padding-bottom: 3.1rem;
+  }
+  .c-11-txt > p:first-child{
+    margin-bottom: .6rem;
+  }
+
+  #contactForm{
+    padding: 0;
+    margin-top: 2rem;
+    gap: 1.2rem;
+  }
+
+  .c-11-form-wrap > label{
+    margin-bottom: .6rem;
+  }
+
+  .c-11-input2{
+    border-radius: .6rem;
+  }
+  .c-11-company-logo{
+    display: none;
+  }
   /* content-11 end */
 }
 /* breakPoint 2 CSS END */
@@ -943,6 +1143,10 @@ c-5-card1-wrap > div:last-child{
   /* content-03 start */
   #content-03 .inner1440{
     gap: 1.6rem;
+  }
+
+  .c-3{
+    padding-left: 20px;
   }
   .c-2-sub-title1{
     display: none;
@@ -1052,7 +1256,7 @@ c-5-card1-wrap > div:last-child{
   .c-8-logo-wrap > div:nth-child(2){
     transform: translateX(4rem);
   }
-  .inner100per > div:nth-child(2), .c-8-white-gradient1, c-8-white-gradient2{
+  #content-08 > .inner100per > div:nth-child(2), .c-8-white-gradient1, c-8-white-gradient2{
     height: 5rem;
   }
   .c-8-white-gradient1, c-8-white-gradient2{
@@ -1081,6 +1285,13 @@ c-5-card1-wrap > div:last-child{
   /* content-09 & 10 end */
 
   /* content-11 start */
+  .c-11-form-wrap > label{
+    margin-bottom: .3rem;
+  }
+
+  .c-11-txt-wrap > .inner1440{
+    padding-bottom: 2.4rem;
+  }
   /* content-11 end */
 }
 /* breakPoint 3 CSS END */
