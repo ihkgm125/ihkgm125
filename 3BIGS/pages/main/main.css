@@ -60,11 +60,11 @@
   position: relative;
   height: 100%;
   width: 11rem;
-  transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out; /* 애니메이션 추가 */
 }
 
 .c-2-on {
-  width: 100% !important;
+  width: 100% !important; /* 활성화될 때 너비 증가 */
 }
 
 .c-2-t-img{
@@ -120,7 +120,7 @@
   border-radius: 1.2rem;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* 이미지 비율 유지 */
 }
 
 .c-2-display-none{
@@ -158,16 +158,16 @@
 }
 
 .c-3-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%; /* 이미지 크기를 부모 영역에 맞게 조정 */
+  height: 100%; /* 이미지가 부모 영역을 꽉 채우도록 설정 */
+  object-fit: cover; /* 이미지 비율을 유지하면서 부모 영역을 채움 */
   border-radius: 1.2rem;
 }
 
 .c-3-txt {
-  width: 27.2rem;
+  width: 27.2rem; /* 고정된 너비 */
   position: relative;
-  z-index: 1;
+  z-index: 1; /* 텍스트가 이미지 위에 표시되도록 설정 */
 }
 
 .c-3-head-title {
@@ -293,7 +293,7 @@
 .c-5-card1-txt{
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-end; /* 내부 요소를 오른쪽 정렬 */
   padding: 1.2rem 1.6rem;
   box-sizing: border-box;
   background-color: var(--gray-background);
@@ -502,7 +502,7 @@ c-5-card1-wrap > div:last-child{
 }
 .c-7-n-c-head-title {
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 2; /* 원하는 줄 수 설정 */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -529,25 +529,29 @@ c-5-card1-wrap > div:last-child{
   position: absolute;
   display: flex;
   gap: 2rem;
-  white-space: nowrap;
+  white-space: nowrap; /* 줄바꿈 방지 */
   animation: slideLeft 60s linear infinite;
   flex-direction: column;
 }
 
+/* 로고들을 감싸는 각 div들도 flex 적용 */
 .c-8-logo-wrap > div {
   display: flex;
   gap: 12rem;
 }
 
+/* 두 번째 줄 로고 이동 */
 .c-8-logo-wrap > div:nth-child(2) {
   transform: translateX(12rem);
 }
 
+/* 개별 로고 크기 설정 */
 .c-8-logo {
   width: 10rem;
   height: 3rem;
 }
 
+/* 좌우 그라디언트 */
 .c-8-white-gradient1 {
   width: calc((100% - 1440px) / 2);
   height: 15rem;
@@ -563,14 +567,14 @@ c-5-card1-wrap > div:last-child{
   height: 15rem;
   background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
   position: absolute;
-  z-index: 2; 
+  z-index: 2;  /* z-index를 1보다 높게 설정 */
   top: 0;
   right: 0;
 }
 
 #content-08 > .inner100per > div:nth-child(2){
   width: 100%;
-  height: 10rem;
+  height: 10rem;  /* 원하는 높이로 설정 */
   position: relative;
 }
 
@@ -602,7 +606,7 @@ c-5-card1-wrap > div:last-child{
 }
 .c-9-office-info-wrap{
   width: auto;
-  min-width: 200px;
+  min-width: 200px; /* 너무 작아지지 않도록 최소 너비 설정 */
   display: flex;
   align-items: center;
   gap: 1.2rem;
@@ -631,10 +635,6 @@ c-5-card1-wrap > div:last-child{
 /* content-09 & 10 end */
 
 /* content-11 start */
-.inner100per {
-  width: 100%;
-  height: 10rem;
-}
 
 #content-11 > .inner100per{
   width: 100%;
@@ -685,12 +685,12 @@ c-5-card1-wrap > div:last-child{
 }
 
 .c-11-txt-wrap::before {
-  background-color: rgba(49, 212, 233, 0.3);
+  background-color: rgba(49, 212, 233, 0.3); /* #31D4E9, 30% 투명도 */
 }
 
 .c-11-txt-wrap::after {
-  background-color: rgba(49, 65, 233, 0.3);
-  z-index: 1;
+  background-color: rgba(49, 65, 233, 0.3); /* #3141E9, 30% 투명도 */
+  z-index: 1; /* ::after가 ::before 위에 오도록 설정 */
 }
 
 .c-11-txt-wrap > .inner1440{
@@ -816,7 +816,7 @@ input:focus, textarea:focus{
 }
 
 .c-11-checkbox-wrap > label {
-  cursor: not-allowed;
+  cursor: not-allowed; /* label에도 cursor 스타일 적용 */
 }
 
 .c-11-btn.active{
@@ -933,7 +933,7 @@ input:invalid {
     overflow: scroll;
   }
   .c-4-btn-wrap::-webkit-scrollbar {
-    display: none;
+    display: none; /* 스크롤바 숨기기 */
   }
   .c-4-btn{
     min-width: auto;
@@ -950,6 +950,7 @@ input:invalid {
     background-color: var(--gray-background);
   }
   .c-4-txt-n-img {
+    /* margin-top: 3.7rem; */
     flex-direction: column-reverse;
   }
   .c-4-txt{
@@ -1062,7 +1063,7 @@ input:invalid {
     border-radius: .6rem ;
     gap: .6rem;
     padding: .8rem 1.6rem;
-    flex: 1;
+    flex: 1; /* 기본적으로 동일한 너비 */
   }
   .c-9-company-info{
     flex-wrap: wrap;
@@ -1070,7 +1071,8 @@ input:invalid {
     margin: 2rem 0 1.6rem 0;
   }
   .c-9-company-info > div:nth-child(3){
-    flex: 0 0 100%;
+    flex: 0 0 100%; /* 너비를 100%로 고정 */
+    width: 100%;
   }
   .c-9-office-info-wrap > span{
     font-size: 2.4rem;
@@ -1274,7 +1276,7 @@ input:invalid {
     margin: 1.2rem 0 .8rem 0;
   }
   .c-9-company-info > a{
-    width: 100%;
+    width: 100% !important;
   }
   .c-9-office-info-wrap > span{
     font-size: 1.6rem;
